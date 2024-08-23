@@ -95,21 +95,26 @@
             const ethAddress = document.getElementById('ethAddress').value;
             const twitterHandle = document.getElementById('twitterHandle').value;
 
-            const response = await fetch('/api/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ ethAddress, twitterHandle }),
-            });
+            try {
+                const response = await fetch('/api/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ ethAddress, twitterHandle }),
+                });
 
-            if (response.ok) {
-                thankYouMessage.style.display = 'block';
-                // Optionally, you can hide the form inputs and submit button after submission
-                document.getElementById('ethAddress').style.display = 'none';
-                document.getElementById('twitterHandle').style.display = 'none';
-                submitButton.style.display = 'none';
-            } else {
+                if (response.ok) {
+                    thankYouMessage.style.display = 'block';
+                    document.getElementById('ethAddress').style.display = 'none';
+                    document.getElementById('twitterHandle').style.display = 'none';
+                    submitButton.style.display = 'none';
+                } else {
+                    const errorData = await response.json();
+                    alert(`Error: ${errorData.message}`);
+                }
+            } catch (error) {
+                console.error('Network error:', error);
                 alert('There was an issue submitting your information. Please try again.');
             }
         });
