@@ -3,6 +3,7 @@ import path from 'path';
 
 export default async function handler(req, res) {
     if (req.method === 'POST') {
+        console.log('Received POST request:', req.body);
         try {
             const { ethAddress, twitterHandle } = req.body;
 
