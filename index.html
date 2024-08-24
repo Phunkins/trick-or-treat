@@ -5,89 +5,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trick or Treat</title>
     <style>
-        /* Basic styles */
-        body {
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             overflow: hidden;
         }
-        #doorContainer {
+        #container {
             position: relative;
-            text-align: center;
-            margin: 0;
-            height: 100vh;
-            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            max-width: 1000px;
+            max-height: 600px;
         }
-        #door {
-            max-width: 100%;
+        #door, #silhouette, #candy, #bag {
+            position: absolute;
+            width: 100%;
             height: auto;
-            cursor: pointer;
+            max-height: 100%;
+            transition: opacity 0.5s;
         }
-        #silhouette, #candy {
-            display: none;
+        #door.open {
+            opacity: 0;
+        }
+        #silhouette, #candy, #bag {
+            opacity: 0;
+        }
+        #text {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 50%; /* Adjust size as needed */
+            font-size: 3em;
+            opacity: 0;
+            transition: opacity 0.5s;
         }
         #popup {
-            display: none;
-            position: fixed;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: white;
+            background-color: #fff;
+            color: #000;
             padding: 20px;
-            border: 1px solid #ccc;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
-        #popup input, #popup button {
-            display: block;
-            margin: 10px 0;
+            border-radius: 10px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
         }
         #thankYouMessage {
+            display: none;
+            font-size: 1.2em;
             color: green;
-            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div id="doorContainer">
-        <img id="door" src="door-closed.png" alt="Closed Door">
+    <div id="container">
+        <img id="door" src="door.jpg" alt="Closed Door">
         <img id="silhouette" src="silhouette.png" alt="Silhouette">
         <img id="candy" src="candy.png" alt="Candy">
-    </div>
-    
-    <div id="popup">
-        <h2>Enter Your ETH Address (0x...)</h2>
-        <input type="text" id="ethAddress" placeholder="0x1234...">
-        <h2>Twitter Handle</h2>
-        <input type="text" id="twitterHandle" placeholder="@YourTwitterHandle">
-        <button id="submit">Submit</button>
-        <p id="thankYouMessage" style="display: none;">Thank you for entering your address, it has been recorded for WL on the Phunkins mint!</p>
+        <img id="bag" src="bag.png" alt="Bag">
+        <div id="text">Trick or Treat!</div>
+        <div id="popup">
+            <p>Enter Your Eth Address (0x...):</p>
+            <input type="text" id="ethAddress">
+            <p>Twitter Handle:</p>
+            <input type="text" id="twitterHandle">
+            <button id="submit">Submit</button>
+            <p id="thankYouMessage">Thank you for entering your address, it has been recorded for WL on the Phunkins mint!</p>
+        </div>
     </div>
 
-    <script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyCywrM-SW-JloFcfduOsy3M2MzeSYiO91A",
+            authDomain: "phunkins-d01ed.firebaseapp.com",
+            projectId: "phunkins-d01ed",
+            storageBucket: "phunkins-d01ed.appspot.com",
+            messagingSenderId: "936260550028",
+            appId: "1:936260550028:web:86c4ecc7faada642fe2aa9",
+            measurementId: "G-53NDCXVDHW"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        // Elements
         const door = document.getElementById('door');
         const silhouette = document.getElementById('silhouette');
         const candy = document.getElementById('candy');
+        const bag = document.getElementById('bag');
+        const text = document.getElementById('text');
         const popup = document.getElementById('popup');
         const submitButton = document.getElementById('submit');
         const thankYouMessage = document.getElementById('thankYouMessage');
 
         door.addEventListener('click', () => {
-            door.src = 'door-open.png';
+            door.classList.add('open');
             setTimeout(() => {
-                silhouette.style.display = 'block';
-                candy.style.display = 'block';
+                text.style.opacity = 1;
+                silhouette.style.opacity = 1;
             }, 1000);
-
             setTimeout(() => {
-                document.body.style.backgroundColor = 'black';
-                popup.style.display = 'block';
+                candy.style.opacity = 1;
+                bag.style.opacity = 1;
+            }, 2000);
+            setTimeout(() => {
+                document.body.style.backgroundColor = '#000';
+                popup.style.display = 'flex';
             }, 3000);
         });
 
@@ -96,25 +136,18 @@
             const twitterHandle = document.getElementById('twitterHandle').value;
 
             try {
-                const response = await fetch('/api/register', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ ethAddress, twitterHandle }),
+                await addDoc(collection(db, "submissions"), {
+                    ethAddress: ethAddress,
+                    twitterHandle: twitterHandle,
+                    timestamp: new Date()
                 });
 
-                if (response.ok) {
-                    thankYouMessage.style.display = 'block';
-                    document.getElementById('ethAddress').style.display = 'none';
-                    document.getElementById('twitterHandle').style.display = 'none';
-                    submitButton.style.display = 'none';
-                } else {
-                    const errorData = await response.json();
-                    alert(`Error: ${errorData.message}`);
-                }
+                thankYouMessage.style.display = 'block';
+                document.getElementById('ethAddress').style.display = 'none';
+                document.getElementById('twitterHandle').style.display = 'none';
+                submitButton.style.display = 'none';
             } catch (error) {
-                console.error('Network error:', error);
+                console.error('Error writing document: ', error);
                 alert('There was an issue submitting your information. Please try again.');
             }
         });
