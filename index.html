@@ -207,6 +207,7 @@
 
         async function submitForm(event) {
             event.preventDefault();
+            console.log("Form submitted"); // Debugging line
             const ethAddress = document.getElementById('ethAddress').value;
             const twitterHandle = document.getElementById('twitterHandle').value;
 
@@ -231,6 +232,7 @@
         }
 
         function closeThankYouPopup() {
+            console.log("Thank you popup closing"); // Debugging line
             document.getElementById('thankYouPopup').classList.add('hidden');
         }
     </script>
