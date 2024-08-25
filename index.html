@@ -5,82 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trick or Treat</title>
     <style>
-        body, html {
-            height: 100%;
+        body {
             margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
+            height: 100vh;
         }
-        #container {
+
+        .hidden {
+            display: none;
+        }
+
+        .door {
             position: relative;
+            width: 30vw; /* Adjust the width relative to the viewport width */
+            max-height: 80vh; /* Prevent it from exceeding 80% of the viewport height */
+        }
+
+        .door img {
+            width: 100%; /* Make the image take up the full width of the container */
+            height: auto;
+            cursor: pointer;
+        }
+
+        #silhouetteContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            max-width: 1000px;
-            max-height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
         }
-        #door, #silhouette, #candy, #bag {
-            position: absolute;
-            width: 100%;
+
+        #silhouetteContainer img {
+            width: 70%; /* Adjust the size of the silhouette relative to the door */
             height: auto;
-            max-height: 100%;
-            transition: opacity 0.5s;
-        }
-        #door.open {
             opacity: 0;
+            transition: opacity 1s;
         }
-        #silhouette, #candy, #bag {
-            opacity: 0;
+
+        #trickOrTreatText {
+            font-size: 2em;
+            margin-top: 20px;
         }
-        #text {
+
+        #candy {
+            width: 20px;
+            height: 20px;
+            background-color: #ff0;
+            margin: 10px auto;
+            position: relative;
+        }
+
+        #fadeOutScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: 0.8;
+            z-index: 1000;
+        }
+
+        #popupForm, #thankYouPopup {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 3em;
-            opacity: 0;
-            transition: opacity 0.5s;
-        }
-        #popup {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            color: #000;
+            background-color: #333;
             padding: 20px;
             border-radius: 10px;
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+            z-index: 1100;
         }
-        #thankYouMessage {
+
+        #popupForm input, #popupForm button, #thankYouPopup button {
+            display: block;
+            margin: 10px 0;
+            padding: 5px;
+            width: calc(100% - 12px);
+        }
+
+        #popupForm button, #thankYouPopup button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #popupForm button:hover, #thankYouPopup button:hover {
+            background-color: #45a049;
+        }
+
+        #thankYouPopup {
             display: none;
-            font-size: 1.2em;
-            color: green;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <img id="door" src="door.jpg" alt="Closed Door">
-        <img id="silhouette" src="silhouette.png" alt="Silhouette">
-        <img id="candy" src="candy.png" alt="Candy">
-        <img id="bag" src="bag.png" alt="Bag">
-        <div id="text">Trick or Treat!</div>
-        <div id="popup">
-            <p>Enter Your Eth Address (0x...):</p>
-            <input type="text" id="ethAddress">
-            <p>Twitter Handle:</p>
-            <input type="text" id="twitterHandle">
-            <button id="submit">Submit</button>
-            <p id="thankYouMessage">Thank you for entering your address, it has been recorded for WL on the Phunkins mint!</p>
+    <div id="door" class="door">
+        <img src="door_closed.png" id="doorImage" alt="Door">
+        <div id="silhouetteContainer" class="hidden">
+            <img src="silhouette.png" alt="Silhouette">
         </div>
+    </div>
+    <div id="trickOrTreatText" class="hidden">Trick or Treat!</div>
+    <div id="candyContainer" class="hidden">
+        <div id="candy"></div>
+    </div>
+    <div id="fadeOutScreen" class="hidden"></div>
+    <div id="popupForm" class="hidden">
+        <form id="ethForm" onsubmit="submitForm(event)">
+            <label for="ethAddress">Enter Your Eth Address (0x...)</label>
+            <input type="text" id="ethAddress" name="ethAddress" required>
+            <label for="twitterHandle">Twitter Handle</label>
+            <input type="text" id="twitterHandle" name="twitterHandle" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="thankYouPopup" class="hidden">
+        <p>Thank you for submitting your wallet, you will be added to the WL!</p>
+        <button onclick="closeThankYouPopup()">Close</button>
     </div>
 
     <script type="module">
@@ -107,39 +163,55 @@
 
         console.log("Firebase initialized:", app);
 
-        // Elements
-        const door = document.getElementById('door');
-        const silhouette = document.getElementById('silhouette');
-        const candy = document.getElementById('candy');
-        const bag = document.getElementById('bag');
-        const text = document.getElementById('text');
-        const popup = document.getElementById('popup');
-        const submitButton = document.getElementById('submit');
-        const thankYouMessage = document.getElementById('thankYouMessage');
+        document.getElementById('doorImage').addEventListener('click', openDoor);
 
-        door.addEventListener('click', () => {
-            door.classList.add('open');
-            setTimeout(() => {
-                text.style.opacity = 1;
-                silhouette.style.opacity = 1;
-            }, 1000);
-            setTimeout(() => {
-                candy.style.opacity = 1;
-                bag.style.opacity = 1;
-            }, 2000);
-            setTimeout(() => {
-                document.body.style.backgroundColor = '#000';
-                popup.style.display = 'flex';
-            }, 3000);
-        });
+        function openDoor() {
+            const doorImage = document.getElementById('doorImage');
+            doorImage.src = 'door_open.png'; // Change to an image of the open door
 
-        submitButton.addEventListener('click', async () => {
+            setTimeout(() => {
+                document.getElementById('trickOrTreatText').classList.remove('hidden');
+                showSilhouette();
+            }, 1000); // Delay for the door to open
+        }
+
+        function showSilhouette() {
+            const silhouetteContainer = document.getElementById('silhouetteContainer');
+            silhouetteContainer.classList.remove('hidden');
+
+            const silhouette = silhouetteContainer.querySelector('img');
+            silhouette.style.opacity = 1; // Fade in the silhouette
+
+            setTimeout(() => {
+                dropCandy();
+            }, 1000); // Delay before candy drop
+        }
+
+        function dropCandy() {
+            const candy = document.getElementById('candy');
+            candy.style.transition = "top 1s";
+            candy.style.top = "100px"; // Adjust based on where you want the candy to drop
+
+            setTimeout(() => {
+                fadeToBlack();
+            }, 2000); // Delay for candy drop
+        }
+
+        function fadeToBlack() {
+            document.getElementById('fadeOutScreen').classList.remove('hidden');
+
+            setTimeout(() => {
+                document.getElementById('popupForm').classList.remove('hidden');
+            }, 1000); // Delay before showing the popup form
+        }
+
+        async function submitForm(event) {
+            event.preventDefault();
             const ethAddress = document.getElementById('ethAddress').value;
             const twitterHandle = document.getElementById('twitterHandle').value;
 
-            console.log("Submit button clicked");
-            console.log("Eth Address:", ethAddress);
-            console.log("Twitter Handle:", twitterHandle);
+            console.log(`Eth Address: ${ethAddress}`);
+            console.log(`Twitter Handle: ${twitterHandle}`);
 
             try {
                 const docRef = await addDoc(collection(db, "submissions"), {
@@ -149,15 +221,18 @@
                 });
                 console.log("Document written with ID: ", docRef.id);
 
-                thankYouMessage.style.display = 'block';
-                document.getElementById('ethAddress').style.display = 'none';
-                document.getElementById('twitterHandle').style.display = 'none';
-                submitButton.style.display = 'none';
+                // Hide the form and show the thank you message
+                document.getElementById('popupForm').classList.add('hidden');
+                document.getElementById('thankYouPopup').classList.remove('hidden');
             } catch (error) {
                 console.error("Error adding document: ", error);
                 alert('There was an issue submitting your information. Please try again.');
             }
-        });
+        }
+
+        function closeThankYouPopup() {
+            document.getElementById('thankYouPopup').classList.add('hidden');
+        }
     </script>
 </body>
 </html>
