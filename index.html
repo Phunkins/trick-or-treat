@@ -3,238 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trick or Treat</title>
+    <title>Live Price SVG</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #000;
-            color: #fff;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .door {
-            position: relative;
-            width: 30vw; /* Adjust the width relative to the viewport width */
-            max-height: 80vh; /* Prevent it from exceeding 80% of the viewport height */
-        }
-
-        .door img {
-            width: 100%; /* Make the image take up the full width of the container */
-            height: auto;
-            cursor: pointer;
-        }
-
-        #silhouetteContainer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            pointer-events: none;
-        }
-
-        #silhouetteContainer img {
-            width: 70%; /* Adjust the size of the silhouette relative to the door */
-            height: auto;
-            opacity: 0;
-            transition: opacity 1s;
-        }
-
-        #trickOrTreatText {
-            font-size: 2em;
-            margin-top: 20px;
-        }
-
-        #candy {
-            width: 20px;
-            height: 20px;
-            background-color: #ff0;
-            margin: 10px auto;
-            position: relative;
-        }
-
-        #fadeOutScreen {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #000;
-            opacity: 0.8;
-            z-index: 1000;
-        }
-
-        #popupForm, #thankYouPopup {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #333;
-            padding: 20px;
-            border-radius: 10px;
-            z-index: 1100;
-        }
-
-        #popupForm input, #popupForm button, #thankYouPopup button {
+        svg {
+            width: 500px;
+            height: 300px;
             display: block;
-            margin: 10px 0;
-            padding: 5px;
-            width: calc(100% - 12px);
+            margin: 50px auto;
         }
-
-        #popupForm button, #thankYouPopup button {
-            padding: 8px 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #popupForm button:hover, #thankYouPopup button:hover {
-            background-color: #45a049;
-        }
-
-        #thankYouPopup {
-            display: none;
+        text {
+            font-size: 48px;
+            fill: white;
+            text-anchor: middle;
+            dominant-baseline: middle;
         }
     </style>
 </head>
 <body>
-    <div id="door" class="door">
-        <img src="door_closed.png" id="doorImage" alt="Door">
-        <div id="silhouetteContainer" class="hidden">
-            <img src="silhouette.png" alt="Silhouette">
-        </div>
-    </div>
-    <div id="trickOrTreatText" class="hidden">Trick or Treat!</div>
-    <div id="candyContainer" class="hidden">
-        <div id="candy"></div>
-    </div>
-    <div id="fadeOutScreen" class="hidden"></div>
-    <div id="popupForm" class="hidden">
-        <form id="ethForm" onsubmit="submitForm(event)">
-            <label for="ethAddress">Enter Your Eth Address (0x...)</label>
-            <input type="text" id="ethAddress" name="ethAddress" required>
-            <label for="twitterHandle">Twitter Handle</label>
-            <input type="text" id="twitterHandle" name="twitterHandle" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-    <div id="thankYouPopup" class="hidden">
-        <p>Thank you for submitting your wallet, you will be added to the WL!</p>
-        <button onclick="closeThankYouPopup()">Close</button>
-    </div>
 
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
-        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-analytics.js";
+    <svg id="price-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
+        <rect id="background" width="100%" height="100%" fill="green"></rect>
+        <text x="50%" y="50%" id="price-text">$0.00</text>
+    </svg>
 
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-            apiKey: "AIzaSyCywrM-SW-JloFcfduOsy3M2MzeSYiO91A",
-            authDomain: "phunkins-d01ed.firebaseapp.com",
-            projectId: "phunkins-d01ed",
-            storageBucket: "phunkins-d01ed.appspot.com",
-            messagingSenderId: "936260550028",
-            appId: "1:936260550028:web:86c4ecc7faada642fe2aa9",
-            measurementId: "G-53NDCXVDHW"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const db = getFirestore(app);
-
-        console.log("Firebase initialized:", app);
-
-        document.getElementById('doorImage').addEventListener('click', openDoor);
-
-        function openDoor() {
-            const doorImage = document.getElementById('doorImage');
-            doorImage.src = 'door_open.png'; // Change to an image of the open door
-
-            setTimeout(() => {
-                document.getElementById('trickOrTreatText').classList.remove('hidden');
-                showSilhouette();
-            }, 1000); // Delay for the door to open
+    <script>
+        async function fetchPrice() {
+            const response = await fetch('https://mempool.space/api/v1/prices');
+            const data = await response.json();
+            const usdPrice = data.USD;
+            return usdPrice;
         }
 
-        function showSilhouette() {
-            const silhouetteContainer = document.getElementById('silhouetteContainer');
-            silhouetteContainer.classList.remove('hidden');
-
-            const silhouette = silhouetteContainer.querySelector('img');
-            silhouette.style.opacity = 1; // Fade in the silhouette
-
-            setTimeout(() => {
-                dropCandy();
-            }, 1000); // Delay before candy drop
+        function formatUSD(value) {
+            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
         }
 
-        function dropCandy() {
-            const candy = document.getElementById('candy');
-            candy.style.transition = "top 1s";
-            candy.style.top = "100px"; // Adjust based on where you want the candy to drop
-
-            setTimeout(() => {
-                fadeToBlack();
-            }, 2000); // Delay for candy drop
+        function updateBackgroundColor(price) {
+            const minPrice = 0;
+            const maxPrice = 100000;
+            const percentage = Math.min((price - minPrice) / (maxPrice - minPrice), 1);
+            const red = Math.round(percentage * 255);
+            const green = Math.round((1 - percentage) * 255);
+            return `rgb(${red},${green},0)`;
         }
 
-        function fadeToBlack() {
-            document.getElementById('fadeOutScreen').classList.remove('hidden');
+        async function updateSVG() {
+            const usdPrice = await fetchPrice();
+            const formattedPrice = formatUSD(usdPrice);
 
-            setTimeout(() => {
-                document.getElementById('popupForm').classList.remove('hidden');
-            }, 1000); // Delay before showing the popup form
+            const priceText = document.getElementById('price-text');
+            const background = document.getElementById('background');
+
+            priceText.textContent = formattedPrice;
+            background.setAttribute('fill', updateBackgroundColor(usdPrice));
         }
 
-        async function submitForm(event) {
-            event.preventDefault();
-            console.log("Form submitted"); // Debugging line
-            const ethAddress = document.getElementById('ethAddress').value;
-            const twitterHandle = document.getElementById('twitterHandle').value;
+        // Initial load
+        updateSVG();
 
-            console.log(`Eth Address: ${ethAddress}`);
-            console.log(`Twitter Handle: ${twitterHandle}`);
-
-            try {
-                const docRef = await addDoc(collection(db, "submissions"), {
-                    ethAddress: ethAddress,
-                    twitterHandle: twitterHandle,
-                    timestamp: new Date()
-                });
-                console.log("Document written with ID: ", docRef.id);
-
-                // Hide the form and show the thank you message
-                document.getElementById('popupForm').classList.add('hidden');
-                document.getElementById('thankYouPopup').classList.remove('hidden');
-            } catch (error) {
-                console.error("Error adding document: ", error);
-                alert('There was an issue submitting your information. Please try again.');
-            }
-        }
-
-        function closeThankYouPopup() {
-            console.log("Thank you popup closing"); // Debugging line
-            document.getElementById('thankYouPopup').classList.add('hidden');
-        }
+        // Update every 5 minutes
+        setInterval(updateSVG, 1 * 60 * 1000);
     </script>
+
 </body>
 </html>
