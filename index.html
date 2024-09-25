@@ -17,14 +17,28 @@
             text-anchor: middle;
             dominant-baseline: middle;
         }
+        .small-text {
+            font-size: 16px;
+            fill: white;
+        }
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
     <svg id="price-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
         <rect id="background" width="100%" height="100%" fill="green"></rect>
-        <text x="50%" y="50%" id="price-text">$0.00</text>
+        <text x="50%" y="40%" id="price-text">$0.00</text>
+        <text x="50%" y="65%" id="last-updated-text" class="small-text">Last updated: --</text>
     </svg>
+
+    <button id="refresh-button">Refresh Price</button>
 
     <script>
         async function fetchPrice() {
@@ -47,22 +61,32 @@
             return `rgb(${red},${green},0)`;
         }
 
+        function formatDate(date) {
+            return date.toLocaleString();
+        }
+
         async function updateSVG() {
             const usdPrice = await fetchPrice();
             const formattedPrice = formatUSD(usdPrice);
+            const lastUpdated = new Date();
 
             const priceText = document.getElementById('price-text');
+            const lastUpdatedText = document.getElementById('last-updated-text');
             const background = document.getElementById('background');
 
             priceText.textContent = formattedPrice;
+            lastUpdatedText.textContent = `Last updated: ${formatDate(lastUpdated)}`;
             background.setAttribute('fill', updateBackgroundColor(usdPrice));
         }
+
+        // Add event listener for the refresh button
+        document.getElementById('refresh-button').addEventListener('click', updateSVG);
 
         // Initial load
         updateSVG();
 
-        // Update every 5 minutes
-        setInterval(updateSVG, 1 * 60 * 1000);
+        // Update every 5 minutes automatically
+        setInterval(updateSVG, 5 * 60 * 1000);
     </script>
 
 </body>
