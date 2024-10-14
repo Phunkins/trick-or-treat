@@ -3,91 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Price SVG</title>
+    <title>3D Mouse Reactive Lines with Sliders</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            color: white; /* Set default text color to white */
+        }
+
+        #svgContainer {
+            width: 100%;
+            height: 100%;
+            background-color: black; /* Initially black */
+        }
+
         svg {
-            width: 500px;
-            height: 300px;
             display: block;
-            margin: 50px auto;
+            width: 100%;
+            height: 100%;
         }
-        text {
-            font-size: 48px;
-            fill: white;
-            text-anchor: middle;
-            dominant-baseline: middle;
+
+        path {
+            fill: none;
+            stroke-width: 2;
         }
-        .small-text {
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 10px;
+            z-index: 10;
+        }
+
+        .color-picker {
+            margin: 0 10px; /* Add margin to color pickers */
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
             font-size: 16px;
-            fill: white;
         }
-        button {
-            display: block;
-            margin: 20px auto;
+
+        .slider {
+            margin: 10px 10px; /* Add margin to sliders */
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .clear-button, .save-button, .toggle-button {
+            margin-left: 10px;
             padding: 10px 20px;
-            font-size: 16px;
+            background-color: #555; /* Default background color */
+            color: white; /* Default text color */
+            border: 2px solid white; /* Default border color */
             cursor: pointer;
+        }
+
+        .clear-button:hover, .save-button:hover, .toggle-button:hover {
+            background-color: #c3ff00; /* Hover effect */
+        }
+
+        .toggle-button.active {
+            background-color: #c3ff00; /* Change color when active */
         }
     </style>
 </head>
 <body>
 
-    <svg id="price-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 300">
-        <rect id="background" width="100%" height="100%" fill="green"></rect>
-        <text x="50%" y="40%" id="price-text">$0.00</text>
-        <text x="50%" y="65%" id="last-updated-text" class="small-text">Last updated: --</text>
+<div class="controls">
+    <div>
+        <label for="colorPicker">Line Color</label>
+        <input type="color" id="colorPicker" class="color-picker" value="#c3ff00">
+        
+        <label for="bgColorPicker">Background Color</label>
+        <input type="color" id="bgColorPicker" class="color-picker" value="#000000">
+    </div>
+
+    <div>
+        <label for="peakSlider">Peak Intensity</label>
+        <input id="peakSlider" class="slider" type="range" min="0" max="100" value="50">
+
+        <label for="radiusSlider">Radius</label>
+        <input id="radiusSlider" class="slider" type="range" min="50" max="300" value="150">
+    </div>
+
+    <div class="button-container">
+        <button id="toggleButton" class="toggle-button">Increase Elevation</button>
+        <button id="clearButton" class="clear-button">Clear</button>
+        <button id="saveButton" class="save-button">Save as PNG</button>
+    </div>
+</div>
+
+<!-- Wrap the SVG in a container -->
+<div id="svgContainer">
+    <svg id="interactiveSvg" xmlns="http://www.w3.org/2000/svg">
+        <!-- Curved lines will be generated -->
     </svg>
+</div>
 
-    <button id="refresh-button">Refresh Price</button>
+<script>
+    const svg = document.getElementById('interactiveSvg');
+    const colorPicker = document.getElementById('colorPicker');
+    const bgColorPicker = document.getElementById('bgColorPicker');
+    const clearButton = document.getElementById('clearButton');
+    const saveButton = document.getElementById('saveButton');
+    const peakSlider = document.getElementById('peakSlider');
+    const radiusSlider = document.getElementById('radiusSlider');
+    const toggleButton = document.getElementById('toggleButton');
+    const totalLines = 75;
+    const svgWidth = svg.clientWidth;
+    const svgHeight = svg.clientHeight;
+    const lineGap = svgHeight / totalLines;
+    const paths = [];
+    const baseLineStates = [];
+    const currentLineStates = [];
+    let proximityRadius = 150;
+    let peakIntensity = 0.5;
+    const maxPeakHeight = 200;
 
-    <script>
-        async function fetchPrice() {
-            const response = await fetch('https://mempool.space/api/v1/prices');
-            const data = await response.json();
-            const usdPrice = data.USD;
-            return usdPrice;
+    let isMouseDown = false; // Track mouse button state
+    let increaseMode = true; // Track the toggle button state
+
+    // Generate horizontal lines
+    function createLine(yPosition) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
+        let d = `M 0 ${yPosition}`;
+
+        const baseLine = [];
+        const currentLine = [];
+
+        for (let x = 0; x <= svgWidth; x += 50) {
+            d += ` L ${x} ${yPosition}`;
+            baseLine.push(yPosition);
+            currentLine.push(yPosition);
         }
 
-        function formatUSD(value) {
-            return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
+        path.setAttribute('d', d);
+        path.setAttribute('stroke', colorPicker.value);
+        svg.appendChild(path);
+        paths.push(path);
+        baseLineStates.push(baseLine);
+        currentLineStates.push(currentLine);
+    }
+
+    // Create initial static lines
+    for (let i = 0; i < totalLines; i++) {
+        const yPos = i * lineGap;
+        createLine(yPos);
+    }
+
+    // Mouse down event to start affecting lines
+    svg.addEventListener('mousedown', function (e) {
+        isMouseDown = true; // Set mouse button state to down
+        if (e.button === 2) { // Right mouse button
+            e.preventDefault(); // Prevent context menu from appearing
         }
+    });
 
-        function updateBackgroundColor(price) {
-            const minPrice = 0;
-            const maxPrice = 100000;
-            const percentage = Math.min((price - minPrice) / (maxPrice - minPrice), 1);
-            const red = Math.round(percentage * 255);
-            const green = Math.round((1 - percentage) * 255);
-            return `rgb(${red},${green},0)`;
-        }
+    // Mouse up event to stop affecting lines
+    svg.addEventListener('mouseup', function () {
+        isMouseDown = false; // Set mouse button state to up
+    });
 
-        function formatDate(date) {
-            return date.toLocaleString();
-        }
+    // Mouse move event to adjust line curvature
+    svg.addEventListener('mousemove', function (e) {
+        if (!isMouseDown) return; // Only execute if mouse is down
 
-        async function updateSVG() {
-            const usdPrice = await fetchPrice();
-            const formattedPrice = formatUSD(usdPrice);
-            const lastUpdated = new Date();
+        const svgRect = svg.getBoundingClientRect(); // Get the SVG's position and dimensions
+        const mouseX = e.clientX - svgRect.left; // Adjust X by SVG's left position
+        const mouseY = e.clientY - svgRect.top;  // Adjust Y by SVG's top position
 
-            const priceText = document.getElementById('price-text');
-            const lastUpdatedText = document.getElementById('last-updated-text');
-            const background = document.getElementById('background');
+        paths.forEach((path, index) => {
+            const baseY = index * lineGap;
+            let d = `M 0 ${baseY}`;
 
-            priceText.textContent = formattedPrice;
-            lastUpdatedText.textContent = `Last updated: ${formatDate(lastUpdated)}`;
-            background.setAttribute('fill', updateBackgroundColor(usdPrice));
-        }
+            for (let x = 0; x <= svgWidth; x += 50) {
+                const pointIndex = x / 50;
+                const baseYPosition = baseLineStates[index][pointIndex];
+                const currentY = currentLineStates[index][pointIndex];
+                const distance = Math.hypot(mouseX - x, mouseY - currentY);
+                const heightEffect = Math.max(0, proximityRadius - distance);
+                const normalizedEffect = heightEffect / proximityRadius;
 
-        // Add event listener for the refresh button
-        document.getElementById('refresh-button').addEventListener('click', updateSVG);
+                let yOffset;
 
-        // Initial load
-        updateSVG();
+                if (increaseMode) { // Increase mode
+                    const quickIncrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity; // Adjusted by slider
+                    yOffset = currentY - quickIncrease;
 
-        // Update every 5 minutes automatically
-        setInterval(updateSVG, 5 * 60 * 1000);
-    </script>
+                    // Ensure it doesn't exceed the maximum height from the base position
+                    yOffset = Math.max(baseYPosition - maxPeakHeight, yOffset);
+                } else { // Decrease mode
+                    const quickDecrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity; // Adjusted by slider
+                    yOffset = currentY + quickDecrease;
 
+                    // Ensure it doesn't go below the base position
+                    yOffset = Math.min(baseYPosition, yOffset);
+                }
+
+                // Set the new y-coordinate of the line
+                currentLineStates[index][pointIndex] = yOffset;
+
+                d += ` L ${x} ${currentLineStates[index][pointIndex]}`;
+            }
+
+            path.setAttribute('d', d);
+        });
+    });
+
+    // Clear button event to reset lines to flat
+    clearButton.addEventListener('click', () => {
+        paths.forEach((path, index) => {
+            const yPos = index * lineGap;
+            let d = `M 0 ${yPos}`;
+            for (let x = 0; x <= svgWidth; x += 50) {
+                d += ` L ${x} ${yPos}`;
+            }
+            path.setAttribute('d', d);
+            currentLineStates[index] = [...baseLineStates[index]]; // Reset current line state
+        });
+    });
+
+    // Save button event to save as PNG
+    saveButton.addEventListener('click', () => {
+        const svgContainer = document.getElementById('svgContainer'); // Get the SVG container
+        html2canvas(svgContainer, { backgroundColor: null }).then(canvas => {
+            const link = document.createElement('a');
+            link.href = canvas.toDataURL('image/png'); // Create PNG data URL
+            link.download = 'lines.png'; // Set download file name
+            link.click(); // Trigger download
+        });
+    });
+
+    // Color picker events
+    colorPicker.addEventListener('input', () => {
+        paths.forEach(path => path.setAttribute('stroke', colorPicker.value)); // Update stroke color
+    });
+
+    bgColorPicker.addEventListener('input', () => {
+        const bgColor = bgColorPicker.value;
+        svg.style.backgroundColor = bgColor; // Update SVG background color
+    });
+
+    // Peak intensity slider event
+    peakSlider.addEventListener('input', () => {
+        peakIntensity = peakSlider.value / 100; // Update peak intensity based on slider value
+    });
+
+    // Radius slider event
+    radiusSlider.addEventListener('input', () => {
+        proximityRadius = radiusSlider.value; // Update proximity radius based on slider value
+    });
+
+    // Toggle button event to switch between increase and decrease modes
+    toggleButton.addEventListener('click', () => {
+        increaseMode = !increaseMode; // Toggle mode
+        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation'; // Update button text
+    });
+
+    // Prevent context menu from appearing on right-click
+    svg.addEventListener('contextmenu', e => {
+        e.preventDefault();
+    });
+</script>
 </body>
 </html>
