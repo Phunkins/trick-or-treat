@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Mouse Reactive Lines with Sliders</title>
+    <title>3D Mouse & Touch Reactive Lines with Sliders</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body {
@@ -132,7 +132,7 @@
     let peakIntensity = 0.5;
     const maxPeakHeight = 200;
 
-    let isMouseDown = false; // Track mouse button state
+    let isInteracting = false; // Track interaction state (mouse or touch)
     let increaseMode = true; // Track the toggle button state
 
     // Generate horizontal lines
@@ -163,26 +163,30 @@
         createLine(yPos);
     }
 
-    // Mouse down event to start affecting lines
-    svg.addEventListener('mousedown', function (e) {
-        isMouseDown = true; // Set mouse button state to down
-        if (e.button === 2) { // Right mouse button
-            e.preventDefault(); // Prevent context menu from appearing
+    function handleInteractionStart(event) {
+        isInteracting = true;
+        if (event.type === 'touchstart') {
+            event = event.touches[0]; // Normalize touch event
         }
-    });
+        if (event.button === 2) {
+            event.preventDefault(); // Prevent right-click menu
+        }
+    }
 
-    // Mouse up event to stop affecting lines
-    svg.addEventListener('mouseup', function () {
-        isMouseDown = false; // Set mouse button state to up
-    });
+    function handleInteractionEnd() {
+        isInteracting = false;
+    }
 
-    // Mouse move event to adjust line curvature
-    svg.addEventListener('mousemove', function (e) {
-        if (!isMouseDown) return; // Only execute if mouse is down
+    function handleInteractionMove(event) {
+        if (!isInteracting) return;
 
-        const svgRect = svg.getBoundingClientRect(); // Get the SVG's position and dimensions
-        const mouseX = e.clientX - svgRect.left; // Adjust X by SVG's left position
-        const mouseY = e.clientY - svgRect.top;  // Adjust Y by SVG's top position
+        if (event.type === 'touchmove') {
+            event = event.touches[0]; // Normalize touch event
+        }
+
+        const svgRect = svg.getBoundingClientRect();
+        const mouseX = event.clientX - svgRect.left;
+        const mouseY = event.clientY - svgRect.top;
 
         paths.forEach((path, index) => {
             const baseY = index * lineGap;
@@ -198,29 +202,33 @@
 
                 let yOffset;
 
-                if (increaseMode) { // Increase mode
-                    const quickIncrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity; // Adjusted by slider
+                if (increaseMode) {
+                    const quickIncrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity;
                     yOffset = currentY - quickIncrease;
-
-                    // Ensure it doesn't exceed the maximum height from the base position
                     yOffset = Math.max(baseYPosition - maxPeakHeight, yOffset);
-                } else { // Decrease mode
-                    const quickDecrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity; // Adjusted by slider
+                } else {
+                    const quickDecrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity;
                     yOffset = currentY + quickDecrease;
-
-                    // Ensure it doesn't go below the base position
                     yOffset = Math.min(baseYPosition, yOffset);
                 }
 
-                // Set the new y-coordinate of the line
                 currentLineStates[index][pointIndex] = yOffset;
-
                 d += ` L ${x} ${currentLineStates[index][pointIndex]}`;
             }
 
             path.setAttribute('d', d);
         });
-    });
+    }
+
+    // Mouse and touch event listeners
+    svg.addEventListener('mousedown', handleInteractionStart);
+    svg.addEventListener('touchstart', handleInteractionStart);
+
+    svg.addEventListener('mouseup', handleInteractionEnd);
+    svg.addEventListener('touchend', handleInteractionEnd);
+
+    svg.addEventListener('mousemove', handleInteractionMove);
+    svg.addEventListener('touchmove', handleInteractionMove);
 
     // Clear button event to reset lines to flat
     clearButton.addEventListener('click', () => {
@@ -237,45 +245,51 @@
 
     // Save button event to save as PNG
     saveButton.addEventListener('click', () => {
-        const svgContainer = document.getElementById('svgContainer'); // Get the SVG container
+        const svgContainer = document.getElementById('svgContainer');
         html2canvas(svgContainer, { backgroundColor: null }).then(canvas => {
             const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png'); // Create PNG data URL
-            link.download = 'lines.png'; // Set download file name
-            link.click(); // Trigger download
+            link.href = canvas.toDataURL();
+            link.download = 'lines_image.png';
+            link.click();
         });
-    });
-
-    // Color picker events
-    colorPicker.addEventListener('input', () => {
-        paths.forEach(path => path.setAttribute('stroke', colorPicker.value)); // Update stroke color
-    });
-
-    bgColorPicker.addEventListener('input', () => {
-        const bgColor = bgColorPicker.value;
-        svg.style.backgroundColor = bgColor; // Update SVG background color
-    });
-
-    // Peak intensity slider event
-    peakSlider.addEventListener('input', () => {
-        peakIntensity = peakSlider.value / 100; // Update peak intensity based on slider value
-    });
-
-    // Radius slider event
-    radiusSlider.addEventListener('input', () => {
-        proximityRadius = radiusSlider.value; // Update proximity radius based on slider value
     });
 
     // Toggle button event to switch between increase and decrease modes
     toggleButton.addEventListener('click', () => {
-        increaseMode = !increaseMode; // Toggle mode
-        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation'; // Update button text
+        increaseMode = !increaseMode;
+        toggleButton.classList.toggle('active');
+        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation';
     });
 
-    // Prevent context menu from appearing on right-click
-    svg.addEventListener('contextmenu', e => {
-        e.preventDefault();
+    // Update line color dynamically
+    colorPicker.addEventListener('input', () => {
+        paths.forEach(path => {
+            path.setAttribute('stroke', colorPicker.value);
+        });
+
+        // Update button and text colors
+        document.querySelectorAll('button, label').forEach(el => {
+            el.style.color = colorPicker.value;
+        });
     });
+
+    // Update background color dynamically
+    bgColorPicker.addEventListener('input', () => {
+        document.getElementById('svgContainer').style.backgroundColor = bgColorPicker.value;
+    });
+
+    // Update peak intensity from the slider
+    peakSlider.addEventListener('input', () => {
+        peakIntensity = peakSlider.value / 100;
+    });
+
+    // Update proximity radius from the slider
+    radiusSlider.addEventListener('input', () => {
+        proximityRadius = radiusSlider.value;
+    });
+
+    // Disable context menu on right-click
+    window.addEventListener('contextmenu', (e) => e.preventDefault());
 </script>
 </body>
 </html>
