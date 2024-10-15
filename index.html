@@ -77,9 +77,17 @@
         .toggle-button.active {
             background-color: #c3ff00; /* Change color when active */
         }
+
+        .donation-text {
+            font-weight: bold;
+            color: red;
+            margin: 10px; /* Add margin for spacing */
+        }
     </style>
 </head>
 <body>
+
+<div class="donation-text">Donate to the creator (Cryptoferd): 0x8A651D64E05E1Ebd6612e36ecec5184F549e4106</div>
 
 <div class="controls">
     <div>
@@ -246,50 +254,40 @@
     // Save button event to save as PNG
     saveButton.addEventListener('click', () => {
         const svgContainer = document.getElementById('svgContainer');
-        html2canvas(svgContainer, { backgroundColor: null }).then(canvas => {
+        html2canvas(svgContainer, { backgroundColor: null }).then((canvas) => {
             const link = document.createElement('a');
-            link.href = canvas.toDataURL();
-            link.download = 'lines_image.png';
+            link.href = canvas.toDataURL('image/png');
+            link.download = 'interactive_lines.png';
             link.click();
         });
     });
 
-    // Toggle button event to switch between increase and decrease modes
+    // Toggle button to switch between increasing and decreasing elevation
     toggleButton.addEventListener('click', () => {
-        increaseMode = !increaseMode;
+        increaseMode = !increaseMode; // Toggle mode
+        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation'; // Update button text
         toggleButton.classList.toggle('active');
-        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation';
     });
 
-    // Update line color dynamically
+    // Color pickers change line color and background color
     colorPicker.addEventListener('input', () => {
-        paths.forEach(path => {
+        paths.forEach((path) => {
             path.setAttribute('stroke', colorPicker.value);
         });
-
-        // Update button and text colors
-        document.querySelectorAll('button, label').forEach(el => {
-            el.style.color = colorPicker.value;
-        });
     });
 
-    // Update background color dynamically
     bgColorPicker.addEventListener('input', () => {
-        document.getElementById('svgContainer').style.backgroundColor = bgColorPicker.value;
+        svg.style.backgroundColor = bgColorPicker.value; // Change SVG background color
     });
 
-    // Update peak intensity from the slider
+    // Peak intensity and proximity radius sliders
     peakSlider.addEventListener('input', () => {
         peakIntensity = peakSlider.value / 100;
     });
 
-    // Update proximity radius from the slider
     radiusSlider.addEventListener('input', () => {
         proximityRadius = radiusSlider.value;
     });
-
-    // Disable context menu on right-click
-    window.addEventListener('contextmenu', (e) => e.preventDefault());
 </script>
 </body>
 </html>
