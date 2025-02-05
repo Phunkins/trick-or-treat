@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asset Filtering</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding-top: 8%; /* Adds space for the fixed header */
-            background-color: black;
-            color: grey;
-        }
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent body from scrolling */
+}
         /* Header styling */
         #header {
             position: fixed;
@@ -38,28 +37,36 @@
         #header .small-text {
             font-size: 0.8em;
             color: grey;
-        }
-        #left-column {
-            width: 19%;
-            padding: 10px;
-            overflow-y: auto;
-            position: fixed;
-            top: 25%; /* Adjusted to leave space for the header */
-            left: 0;
-            height: calc(100vh - 80px); /* Adjusted to leave space for the header */
-            background-color: #1a1a1a;
-            border-right: 2px solid #444;
-        }
-        #right-column {
-            width: 80%;
-            padding: 20px;
-            margin-left: 20%; /* To make space for the fixed left column */
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            overflow-y: auto;
-            margin-top: 80px; /* Adjusted to leave space for the header */
-        }
+}
+
+#left-column {
+    width: 19%;
+    padding: 10px;
+    overflow-y: auto;
+    position: fixed;
+    top: 80px; /* Adjusted to align with header */
+    left: 0;
+    bottom: 0; /* Ensures it reaches the bottom */
+    height: calc(100vh - 80px); /* Fills remaining space after header */
+    background-color: #1a1a1a;
+    border-right: 2px solid #444;
+}
+
+#right-column {
+    width: 80%;
+    padding: 20px;
+    margin-left: 20%; /* Leaves space for the left column */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    overflow-y: auto;
+    position: absolute; /* Makes it scroll independently */
+    top: 80px; /* Aligns with header */
+    bottom: 0; /* Ensures it reaches the bottom */
+    right: 0;
+    left: 20%;
+    height: calc(100vh - 80px); /* Fills remaining space */
+}
         .trait-type {
             font-size: 1.2em;
             font-weight: bold;
