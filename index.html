@@ -3,291 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Mouse & Touch Reactive Lines with Sliders</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <title>Asset Filtering</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            height: 100vh;
+            padding-top: 8%; /* Adds space for the fixed header */
             background-color: black;
-            overflow: hidden;
-            color: white; /* Set default text color to white */
+            color: grey;
         }
-
-        #svgContainer {
+        /* Header styling */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 100%;
-            background-color: black; /* Initially black */
-        }
-
-        svg {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        path {
-            fill: none;
-            stroke-width: 2;
-        }
-
-        .controls {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 10px;
+            height: 20%;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px;
+            text-align: center;
             z-index: 10;
         }
-
-        .color-picker {
-            margin: 0 10px; /* Add margin to color pickers */
-            border: none;
-            outline: none;
-            background: transparent;
+        #header h1 {
+            margin: 0;
+        }
+        #header h3 {
+            margin: 5px 0;
+        }
+        #header a {
+            color: #55b8e6;
+            text-decoration: none;
+        }
+        #header .small-text {
+            font-size: 0.8em;
+            color: grey;
+        }
+        #left-column {
+            width: 19%;
+            padding: 10px;
+            overflow-y: auto;
+            position: fixed;
+            top: 25%; /* Adjusted to leave space for the header */
+            left: 0;
+            height: calc(100vh - 80px); /* Adjusted to leave space for the header */
+            background-color: #1a1a1a;
+            border-right: 2px solid #444;
+        }
+        #right-column {
+            width: 80%;
+            padding: 20px;
+            margin-left: 20%; /* To make space for the fixed left column */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            overflow-y: auto;
+            margin-top: 80px; /* Adjusted to leave space for the header */
+        }
+        .trait-type {
+            font-size: 1.2em;
+            font-weight: bold;
             color: white;
-            font-size: 16px;
         }
-
-        .slider {
-            margin: 10px 10px; /* Add margin to sliders */
+        .trait-list {
+            margin-left: 20px;
         }
-
-        .button-container {
+        .trait {
+            cursor: pointer;
             display: flex;
             align-items: center;
+            color: grey;
         }
-
-        .clear-button, .save-button, .toggle-button {
-            margin-left: 10px;
-            padding: 10px 20px;
-            background-color: #555; /* Default background color */
-            color: white; /* Default text color */
-            border: 2px solid white; /* Default border color */
+        .trait span {
+            margin-right: 5px;
+        }
+        .button {
+            font-weight: normal;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 5px 10px;
             cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
         }
-
-        .clear-button:hover, .save-button:hover, .toggle-button:hover {
-            background-color: #c3ff00; /* Hover effect */
-        }
-
-        .toggle-button.active {
-            background-color: #c3ff00; /* Change color when active */
-        }
-
-        .donation-text {
+        .button.bold {
             font-weight: bold;
-            color: red;
-            margin: 10px; /* Add margin for spacing */
+        }
+        .button.green {
+            background-color: green;
+            color: white;
+        }
+        .button.red {
+            background-color: red;
+            color: white;
+        }
+        .button.black {
+            background-color: black;
+            color: white;
+        }
+        .asset {
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+            opacity: 0; /* Initially hidden for lazy loading */
+            transition: opacity 0.5s;
+        }
+        .asset img {
+            width: 100%;
+            height: auto;
+        }
+        .clear-filters-button {
+            background-color: #444;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+        }
+        .clear-filters-button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
-
-<div class="donation-text">Donate to the creator (Cryptoferd): 0x8A651D64E05E1Ebd6612e36ecec5184F549e4106</div>
-
-<div class="controls">
-    <div>
-        <label for="colorPicker">Line Color</label>
-        <input type="color" id="colorPicker" class="color-picker" value="#c3ff00">
-        
-        <label for="bgColorPicker">Background Color</label>
-        <input type="color" id="bgColorPicker" class="color-picker" value="#000000">
+    <div id="header">
+        <h1>The PoorTraits</h1>
+        <h3>by <a href="https://x.com/Raxonchain" target="_blank">Rax</a> and <a href="https://x.com/btc_substance" target="_blank">MDV</a></h3>
+        <p>Use the "+" to add a trait to the selection. Use the "-" to exclude a trait from the selection.</p>
+        <p class="small-text">Tool built by <a href="https://x.com/cryptoferd13" target="_blank">Cryptoferd</a></p>
     </div>
-
-    <div>
-        <label for="peakSlider">Peak Intensity</label>
-        <input id="peakSlider" class="slider" type="range" min="0" max="100" value="50">
-
-        <label for="radiusSlider">Radius</label>
-        <input id="radiusSlider" class="slider" type="range" min="50" max="300" value="150">
+    
+    <div id="left-column">
+        <button class="clear-filters-button" onclick="clearAllFilters()">Clear All Filters</button>
+        <div id="filter-container"></div>
     </div>
+    <div id="right-column"></div>
 
-    <div class="button-container">
-        <button id="toggleButton" class="toggle-button">Increase Elevation</button>
-        <button id="clearButton" class="clear-button">Clear</button>
-        <button id="saveButton" class="save-button">Save as PNG</button>
-    </div>
-</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let data = []; // Holds the asset data
+        const selectedTraits = {}; // Stores selected traits for filtering
 
-<!-- Wrap the SVG in a container -->
-<div id="svgContainer">
-    <svg id="interactiveSvg" xmlns="http://www.w3.org/2000/svg">
-        <!-- Curved lines will be generated -->
-    </svg>
-</div>
-
-<script>
-    const svg = document.getElementById('interactiveSvg');
-    const colorPicker = document.getElementById('colorPicker');
-    const bgColorPicker = document.getElementById('bgColorPicker');
-    const clearButton = document.getElementById('clearButton');
-    const saveButton = document.getElementById('saveButton');
-    const peakSlider = document.getElementById('peakSlider');
-    const radiusSlider = document.getElementById('radiusSlider');
-    const toggleButton = document.getElementById('toggleButton');
-    const totalLines = 75;
-    const svgWidth = svg.clientWidth;
-    const svgHeight = svg.clientHeight;
-    const lineGap = svgHeight / totalLines;
-    const paths = [];
-    const baseLineStates = [];
-    const currentLineStates = [];
-    let proximityRadius = 150;
-    let peakIntensity = 0.5;
-    const maxPeakHeight = 200;
-
-    let isInteracting = false; // Track interaction state (mouse or touch)
-    let increaseMode = true; // Track the toggle button state
-
-    // Generate horizontal lines
-    function createLine(yPosition) {
-        const path = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-        let d = `M 0 ${yPosition}`;
-
-        const baseLine = [];
-        const currentLine = [];
-
-        for (let x = 0; x <= svgWidth; x += 50) {
-            d += ` L ${x} ${yPosition}`;
-            baseLine.push(yPosition);
-            currentLine.push(yPosition);
+        // Fetch data from an external JSON file (pmeta2.json)
+        async function fetchData() {
+            const response = await fetch('ptmeta2.json'); // Path to your external JSON file
+            data = await response.json();
+            generateFilters(data);
+            filterAssets();  // Filter assets initially
         }
 
-        path.setAttribute('d', d);
-        path.setAttribute('stroke', colorPicker.value);
-        svg.appendChild(path);
-        paths.push(path);
-        baseLineStates.push(baseLine);
-        currentLineStates.push(currentLine);
-    }
+        // Function to generate the filter options on the left side
+        function generateFilters(data) {
+            const traitTypes = {};
 
-    // Create initial static lines
-    for (let i = 0; i < totalLines; i++) {
-        const yPos = i * lineGap;
-        createLine(yPos);
-    }
+            // Group traits by trait_type and extract unique values
+            data.forEach(item => {
+                item.traits.forEach(trait => {
+                    if (!traitTypes[trait.trait_type]) {
+                        traitTypes[trait.trait_type] = new Set(); // Using Set to ensure uniqueness
+                    }
+                    traitTypes[trait.trait_type].add(trait.value); // Add unique trait values
+                });
+            });
 
-    function handleInteractionStart(event) {
-        isInteracting = true;
-        if (event.type === 'touchstart') {
-            event = event.touches[0]; // Normalize touch event
+            const filterContainer = $('#filter-container');
+            filterContainer.empty();  // Clear the filter container before populating it
+
+            // Create filter UI for each trait type
+            for (const traitType in traitTypes) {
+                const traitValues = [...traitTypes[traitType]].sort(); // Convert Set back to array and sort
+                const traitTypeElement = $('<div class="trait-type"></div>').text(traitType);
+                const traitListElement = $('<div class="trait-list"></div>');
+
+                traitValues.forEach(value => {
+                    const traitItem = $(`<div class="trait"></div>`);
+                    const traitLabel = $(`<span>${value}</span>`);
+                    const buttonGroup = $('<div></div>');
+
+                    const plusButton = $('<button class="button">+</button>');
+                    const minusButton = $('<button class="button">-</button>');
+
+                    // Set click behavior for the buttons
+                    plusButton.on('click', () => toggleTrait(traitType, value, 'on', plusButton, minusButton));
+                    minusButton.on('click', () => toggleTrait(traitType, value, 'exclude', plusButton, minusButton));
+
+                    buttonGroup.append(plusButton, minusButton);
+                    traitItem.append(traitLabel, buttonGroup);
+                    traitListElement.append(traitItem);
+                });
+
+                filterContainer.append(traitTypeElement, traitListElement);
+            }
         }
-        if (event.button === 2) {
-            event.preventDefault(); // Prevent right-click menu
-        }
-    }
 
-    function handleInteractionEnd() {
-        isInteracting = false;
-    }
+        // Toggle trait states (on or exclude) when a button is clicked
+        function toggleTrait(traitType, value, state, plusButton, minusButton) {
+            if (!selectedTraits[traitType]) {
+                selectedTraits[traitType] = {
+                    include: new Set(),
+                    exclude: new Set()
+                };
+            }
 
-    function handleInteractionMove(event) {
-        if (!isInteracting) return;
+            const isActive = selectedTraits[traitType].include.has(value) || selectedTraits[traitType].exclude.has(value);
 
-        if (event.type === 'touchmove') {
-            event = event.touches[0]; // Normalize touch event
-        }
-
-        const svgRect = svg.getBoundingClientRect();
-        const mouseX = event.clientX - svgRect.left;
-        const mouseY = event.clientY - svgRect.top;
-
-        paths.forEach((path, index) => {
-            const baseY = index * lineGap;
-            let d = `M 0 ${baseY}`;
-
-            for (let x = 0; x <= svgWidth; x += 50) {
-                const pointIndex = x / 50;
-                const baseYPosition = baseLineStates[index][pointIndex];
-                const currentY = currentLineStates[index][pointIndex];
-                const distance = Math.hypot(mouseX - x, mouseY - currentY);
-                const heightEffect = Math.max(0, proximityRadius - distance);
-                const normalizedEffect = heightEffect / proximityRadius;
-
-                let yOffset;
-
-                if (increaseMode) {
-                    const quickIncrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity;
-                    yOffset = currentY - quickIncrease;
-                    yOffset = Math.max(baseYPosition - maxPeakHeight, yOffset);
-                } else {
-                    const quickDecrease = Math.pow(normalizedEffect, 3) * 200 * peakIntensity;
-                    yOffset = currentY + quickDecrease;
-                    yOffset = Math.min(baseYPosition, yOffset);
+            // If it's active and clicked again, disable it (reset the state)
+            if (isActive) {
+                if (selectedTraits[traitType].include.has(value)) {
+                    selectedTraits[traitType].include.delete(value);
+                }
+                if (selectedTraits[traitType].exclude.has(value)) {
+                    selectedTraits[traitType].exclude.delete(value);
                 }
 
-                currentLineStates[index][pointIndex] = yOffset;
-                d += ` L ${x} ${currentLineStates[index][pointIndex]}`;
+                // Reset button styles to black
+                plusButton.removeClass('green').addClass('black');
+                minusButton.removeClass('red').addClass('black');
+            } else {
+                if (state === 'on') {
+                    selectedTraits[traitType].include.add(value);
+                    plusButton.removeClass('black').addClass('green');
+                    minusButton.removeClass('red').addClass('black');
+                } else if (state === 'exclude') {
+                    selectedTraits[traitType].exclude.add(value);
+                    minusButton.removeClass('black').addClass('red');
+                    plusButton.removeClass('green').addClass('black');
+                }
             }
 
-            path.setAttribute('d', d);
-        });
-    }
+            filterAssets();  // Re-filter assets based on the new selection
+        }
 
-    // Mouse and touch event listeners
-    svg.addEventListener('mousedown', handleInteractionStart);
-    svg.addEventListener('touchstart', handleInteractionStart);
+        // Function to filter assets based on selected traits
+        function filterAssets() {
+            const filteredAssets = data.filter(item => {
+                let matches = true;
 
-    svg.addEventListener('mouseup', handleInteractionEnd);
-    svg.addEventListener('touchend', handleInteractionEnd);
+                // Check each trait category for matching values
+                for (const traitType in selectedTraits) {
+                    const selected = selectedTraits[traitType];
 
-    svg.addEventListener('mousemove', handleInteractionMove);
-    svg.addEventListener('touchmove', handleInteractionMove);
+                    const itemTraits = item.traits.filter(trait => trait.trait_type === traitType).map(trait => trait.value);
 
-    // Clear button event to reset lines to flat
-    clearButton.addEventListener('click', () => {
-        paths.forEach((path, index) => {
-            const yPos = index * lineGap;
-            let d = `M 0 ${yPos}`;
-            for (let x = 0; x <= svgWidth; x += 50) {
-                d += ` L ${x} ${yPos}`;
+                    // If there's any exclusion and the item contains any excluded traits, don't show it
+                    if ([...selected.exclude].some(value => itemTraits.includes(value))) {
+                        matches = false;
+                        break;
+                    }
+
+                    // If there are includes, make sure the item contains at least one of the selected traits
+                    if (selected.include.size > 0 && ![...selected.include].some(value => itemTraits.includes(value))) {
+                        matches = false;
+                        break;
+                    }
+                }
+
+                return matches;  // Return true if all conditions are met
+            });
+
+            displayAssets(filteredAssets);  // Display the filtered assets
+        }
+
+        // Function to display assets on the right side
+        function displayAssets(assets) {
+            const rightColumn = $('#right-column');
+            rightColumn.empty(); // Clear the assets display
+
+            // Create an Intersection Observer to load assets lazily
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const assetElement = entry.target;
+                        assetElement.style.opacity = 1; // Fade in the asset
+                        observer.unobserve(assetElement); // Stop observing after it has appeared
+                    }
+                });
+            }, { rootMargin: '100px' }); // Trigger observer slightly before the asset is visible
+
+            assets.forEach(item => {
+                const assetElement = $('<div class="asset"></div>');
+                const imageUrl = `https://firebasestorage.googleapis.com/v0/b/big-minds-14f3b.appspot.com/o/ptss%2F${item.id}.png?alt=media`;
+
+                const imageElement = $(`<img data-src="${imageUrl}" alt="${item.name}">`);
+                const nameElement = $(`<a href="https://magiceden.us/ordinals/item-details/${item.id}" target="_blank">${item.name}</a>`);
+
+                // Lazy load the image by setting a data-src attribute
+                imageElement[0].src = imageUrl;
+
+                // Append the asset details
+                assetElement.append(imageElement, nameElement);
+                rightColumn.append(assetElement);
+
+                // Use Intersection Observer to fade the asset in when it is near the viewport
+                observer.observe(assetElement[0]);
+            });
+        }
+
+        // Function to clear all filters
+        function clearAllFilters() {
+            // Reset all selected traits
+            for (const traitType in selectedTraits) {
+                selectedTraits[traitType].include.clear();
+                selectedTraits[traitType].exclude.clear();
             }
-            path.setAttribute('d', d);
-            currentLineStates[index] = [...baseLineStates[index]]; // Reset current line state
-        });
-    });
 
-    // Save button event to save as PNG
-    saveButton.addEventListener('click', () => {
-        const svgContainer = document.getElementById('svgContainer');
-        html2canvas(svgContainer, { backgroundColor: null }).then((canvas) => {
-            const link = document.createElement('a');
-            link.href = canvas.toDataURL('image/png');
-            link.download = 'interactive_lines.png';
-            link.click();
-        });
-    });
+            // Reset all buttons to black
+            $('.button').removeClass('green red').addClass('black');
+            filterAssets();  // Re-filter after clearing filters
+        }
 
-    // Toggle button to switch between increasing and decreasing elevation
-    toggleButton.addEventListener('click', () => {
-        increaseMode = !increaseMode; // Toggle mode
-        toggleButton.textContent = increaseMode ? 'Increase Elevation' : 'Decrease Elevation'; // Update button text
-        toggleButton.classList.toggle('active');
-    });
-
-    // Color pickers change line color and background color
-    colorPicker.addEventListener('input', () => {
-        paths.forEach((path) => {
-            path.setAttribute('stroke', colorPicker.value);
-        });
-    });
-
-    bgColorPicker.addEventListener('input', () => {
-        svg.style.backgroundColor = bgColorPicker.value; // Change SVG background color
-    });
-
-    // Peak intensity and proximity radius sliders
-    peakSlider.addEventListener('input', () => {
-        peakIntensity = peakSlider.value / 100;
-    });
-
-    radiusSlider.addEventListener('input', () => {
-        proximityRadius = radiusSlider.value;
-    });
-</script>
+        // Initial fetch of data when the page loads
+        fetchData();
+    </script>
 </body>
 </html>
