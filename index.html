@@ -42,12 +42,12 @@
         #left-column {
             width: 19%;
             padding: 10px;
-            bottom: 0;
             overflow-y: auto;
             position: fixed;
             top: 25%; /* Adjusted to leave space for the header */
             left: 0;
-            height: calc(100vh - 80px); /* Adjusted to leave space for the header */
+            bottom: 0; /* Ensures it extends to the bottom of the viewport */
+            height: calc(100vh - 25%); /* Adjusted height to ensure scrolling works */
             background-color: black;
             border-right: 2px solid #444;
         }
