@@ -1,3 +1,4 @@
+/* BODY */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,24 +7,31 @@ body {
     color: grey;
 }
 
-/* Header */
+/* HEADER */
 #header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: auto;
     background-color: black;
     color: white;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
     z-index: 10;
 }
-#header h1, #header h3, #header p {
-    margin: 5px 0;
+.hamburger-menu {
+    display: none; /* Hidden on Desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    left: 10px;
+    top: 12px;
 }
 
-/* Left Sidebar */
+/* LEFT SIDEBAR */
 #left-column {
     width: 19%;
     padding: 10px;
@@ -35,9 +43,27 @@ body {
     height: calc(100vh - 30%);
     background-color: black;
     border-right: 2px solid #444;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Right Content Area */
+/* TRAIT SECTIONS */
+.trait-section {
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
+}
+.trait-type {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+}
+.trait-list {
+    display: block; /* Visible on Desktop */
+    margin-left: 15px;
+}
+
+/* MAIN CONTENT */
 #right-column {
     width: 80%;
     padding: 20px;
@@ -49,82 +75,40 @@ body {
     margin-top: 80px;
 }
 
-/* Trait Selection */
-.trait-type {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-}
-.trait-list {
-    margin-left: 20px;
-}
-.trait {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: grey;
-}
-
-/* Buttons */
-.button {
-    font-weight: normal;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    margin: 0 5px;
-}
-.button.bold { font-weight: bold; }
-.button.green { background-color: green; }
-.button.red { background-color: red; }
-.button.black { background-color: black; }
-
-.clear-filters-button {
-    background-color: #444;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-}
-.clear-filters-button:hover {
-    background-color: #555;
-}
-
-/* Asset Display */
-.asset {
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-.asset img {
-    width: 100%;
-    height: auto;
-}
-
-/* Mobile Responsive Styles */
+/* === MOBILE STYLES (≤ 768px) === */
 @media (max-width: 768px) {
     body {
-        padding-top: 15%;
+        padding-top: 12%;
     }
-    #header {
-        padding: 10px;
+
+    /* SHOW HAMBURGER MENU */
+    .hamburger-menu {
+        display: block;
     }
+
+    /* HIDE LEFT COLUMN INITIALLY */
     #left-column {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 2px solid #444;
-        text-align: center;
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: black;
+        box-shadow: 2px 0px 10px rgba(255, 255, 255, 0.2);
+        transition: left 0.3s ease-in-out;
     }
+
+    /* SHOW SIDEBAR WHEN ACTIVE */
+    #left-column.active {
+        left: 0;
+    }
+
+    /* COLLAPSIBLE TRAIT SECTIONS */
+    .trait-list {
+        display: none; /* Start Collapsed on Mobile */
+    }
+
+    /* CONTENT AREA FULL WIDTH */
     #right-column {
         width: 100%;
         margin-left: 0;
