@@ -3,51 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset Explorer</title>
+    <title>Asset Filtering</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- HEADER WITH HAMBURGER MENU (Mobile Only) -->
     <div id="header">
-        <button id="menu-toggle" class="hamburger-menu">☰</button>
-        <h1>Asset Explorer</h1>
+        <h1>The PoorTraits</h1>
+        <h3>by <a href="https://x.com/Raxonchain" target="_blank">Rax</a> and <a href="https://x.com/btc_substance" target="_blank">MDV</a></h3>
+        <p>Use the "+" to add a trait to the selection. Use the "-" to exclude a trait from the selection.</p>
+        <p class="small-text">Tool built by <a href="https://x.com/cryptoferd13" target="_blank">Cryptoferd</a></p>
     </div>
-
-    <!-- LEFT SIDEBAR (TRAIT SELECTION) -->
+    
     <div id="left-column">
-        <button class="clear-filters-button">Clear Filters</button>
-
-        <div class="trait-section">
-            <div class="trait-type" onclick="toggleCollapse(this)">Color</div>
-            <div class="trait-list">
-                <div class="trait">Red</div>
-                <div class="trait">Blue</div>
-                <div class="trait">Green</div>
-            </div>
-        </div>
-
-        <div class="trait-section">
-            <div class="trait-type" onclick="toggleCollapse(this)">Size</div>
-            <div class="trait-list">
-                <div class="trait">Small</div>
-                <div class="trait">Medium</div>
-                <div class="trait">Large</div>
-            </div>
-        </div>
+        <button class="clear-filters-button" onclick="clearAllFilters()">Clear All Filters</button>
+        <div id="filter-container"></div>
     </div>
+    <div id="right-column"></div>
 
-    <!-- RIGHT CONTENT AREA -->
-    <div id="right-column">
-        <div class="asset">
-            <img src="image1.jpg" alt="Asset 1">
-            <p>Asset Name 1</p>
-        </div>
-        <div class="asset">
-            <img src="image2.jpg" alt="Asset 2">
-            <p>Asset Name 2</p>
-        </div>
-    </div>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
