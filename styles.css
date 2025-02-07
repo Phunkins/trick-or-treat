@@ -1,37 +1,29 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 8%; /* Adds space for the fixed header */
+    padding-top: 8%;
     background-color: black;
     color: grey;
 }
-/* Header styling */
+
+/* Header */
 #header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 20%;
+    height: auto;
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
     z-index: 10;
 }
-#header h1 {
-    margin: 0;
-}
-#header h3 {
+#header h1, #header h3, #header p {
     margin: 5px 0;
 }
-#header a {
-    color: #55b8e6;
-    text-decoration: none;
-}
-#header .small-text {
-    font-size: 0.8em;
-    color: grey;
-}
+
+/* Left Sidebar */
 #left-column {
     width: 19%;
     padding: 10px;
@@ -44,6 +36,8 @@ body {
     background-color: black;
     border-right: 2px solid #444;
 }
+
+/* Right Content Area */
 #right-column {
     width: 80%;
     padding: 20px;
@@ -54,6 +48,8 @@ body {
     overflow-y: auto;
     margin-top: 80px;
 }
+
+/* Trait Selection */
 .trait-type {
     font-size: 1.2em;
     font-weight: bold;
@@ -68,9 +64,8 @@ body {
     align-items: center;
     color: grey;
 }
-.trait span {
-    margin-right: 5px;
-}
+
+/* Buttons */
 .button {
     font-weight: normal;
     background-color: black;
@@ -81,33 +76,11 @@ body {
     border-radius: 5px;
     margin: 0 5px;
 }
-.button.bold {
-    font-weight: bold;
-}
-.button.green {
-    background-color: green;
-    color: white;
-}
-.button.red {
-    background-color: red;
-    color: white;
-}
-.button.black {
-    background-color: black;
-    color: white;
-}
-.asset {
-    text-align: center;
-    border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.5s;
-}
-.asset img {
-    width: 100%;
-    height: auto;
-}
+.button.bold { font-weight: bold; }
+.button.green { background-color: green; }
+.button.red { background-color: red; }
+.button.black { background-color: black; }
+
 .clear-filters-button {
     background-color: #444;
     color: white;
@@ -120,4 +93,41 @@ body {
 }
 .clear-filters-button:hover {
     background-color: #555;
+}
+
+/* Asset Display */
+.asset {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.asset img {
+    width: 100%;
+    height: auto;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding-top: 15%;
+    }
+    #header {
+        padding: 10px;
+    }
+    #left-column {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 2px solid #444;
+        text-align: center;
+    }
+    #right-column {
+        width: 100%;
+        margin-left: 0;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
 }
