@@ -37,17 +37,18 @@ body {
     border-right: 2px solid #444;
 }
 
-/* Hamburger Menu (Now Scrolls with the Page) */
+/* Hamburger Menu */
 .hamburger {
-    display: none;
+    display: block; /* Ensure it's visible */
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 20;
+    position: fixed; /* Fixed to the viewport */
+    top: 10px; /* Place 10px from the top */
+    right: 10px; /* Place 10px from the right */
+    z-index: 1000; /* Ensure it stays above everything */
 }
+
 
 /* Right Column (Assets Display) */
 #right-column {
