@@ -3,7 +3,7 @@ const selectedTraits = {}; // Stores selected traits for filtering
 
 // Fetch data from an external JSON file (pmeta2.json)
 async function fetchData() {
-    const response = await fetch('ptmeta2.json'); // Path to your external JSON file
+    const response = await fetch('ptmeta2.json');
     const jsonData = await response.json();
 
     // Check if tokens array is present
@@ -12,10 +12,26 @@ async function fetchData() {
         return;
     }
 
-    data = jsonData.tokens; // Access the 'tokens' array directly
+    data = jsonData.tokens; // Store the tokens
+    const timestamp = jsonData.timestamp; // Access the timestamp directly
+    console.log('Timestamp:', timestamp); // Log to the console
+
+    if (timestamp) {
+        const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + timestamp + '</p>');
+        $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
+    } else {
+        console.error("Timestamp not found in the data.");
+    }
+
     generateFilters(data);  // Generate the filter options based on the data
     filterAssets();  // Filter assets initially
 }
+
+// Call fetchData when the page is ready
+$(document).ready(function() {
+    fetchData();
+});
+
 
 // Function to generate the filter options on the left side
 function generateFilters(data) {
