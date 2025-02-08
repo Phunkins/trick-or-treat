@@ -110,7 +110,7 @@ body {
         width: 19%;
         position: fixed;
         top: 0; /* Fixed at the top */
-        height: 100vh; /* Full height of the screen */
+        height: calc(100vh - 10px); /* Full height of the screen */
         /* Right removed, as we want it fixed to the left side */
     }
 
