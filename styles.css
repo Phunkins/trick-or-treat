@@ -1,28 +1,26 @@
-/* General Styles (same as before) */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 8%;
+    padding: 0;
     background-color: black;
     color: grey;
 }
 
-/* Header */
+/* Header (Fixed on Desktop, Static on Mobile) */
 #header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 20%;
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
     z-index: 10;
 }
+
+/* Small Text */
 .small-text {
-    font-size: 0.8em; /* Adjust the font size as needed */
-    color: #666; /* Optional: Set a lighter color for small text */
+    font-size: 0.8em;
+    color: #666;
 }
 
 /* Left Column (Filters) */
@@ -31,32 +29,12 @@ body {
     padding: 10px;
     overflow-y: auto;
     position: fixed;
-    top: 25%;
+    top: 20%;
     left: 0;
     bottom: 0;
-    height: calc(100vh - 30%);
+    height: calc(100vh - 20%);
     background-color: black;
     border-right: 2px solid #444;
-}
-/* Button color styles */
-.button {
-    background-color: black;
-    color: white;
-}
-
-.button.green {
-    background-color: green;
-    color: white;
-}
-
-.button.red {
-    background-color: red;
-    color: white;
-}
-
-.button.black {
-    background-color: black;
-    color: white;
 }
 
 /* Hamburger Menu */
@@ -70,82 +48,72 @@ body {
     right: 10px;
     z-index: 20;
 }
-.trait-type {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: white;
-}
+
 /* Right Column (Assets Display) */
 #right-column {
     width: 80%;
     padding: 20px;
     margin-left: 20%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 10px;
     overflow-y: auto;
     margin-top: 80px;
 }
 
-/* Mobile-friendly Layout */
+/* Mobile-Friendly Layout */
 @media (max-width: 768px) {
     #header {
-        height: auto;
+        position: static; /* Make header non-fixed */
         padding: 10px;
     }
 
     #left-column {
         width: 100%;
         position: relative;
-        top: 0;
-        left: 0;
-        bottom: auto;
         height: auto;
-        display: none; /* Hide filters by default */
+        display: none; /* Hidden by default */
     }
 
-    /* Show hamburger menu on small screens */
     .hamburger {
         display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
     }
 
     #right-column {
         width: 100%;
         margin-left: 0;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Fit as many assets as possible */
     }
 
     .asset {
         width: 100%;
-        /* Resize images for mobile */
         max-width: 90%;
     }
-
-    /* Grid adjustment for mobile */
-    #right-column {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
-    }
 }
 
-/* Landscape mobile view */
+/* Landscape Mobile View */
 @media (max-width: 1024px) {
     #right-column {
-        grid-template-columns: repeat(5, 1fr); /* 5 columns on landscape mobile */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust dynamically */
     }
 }
 
-/* Desktop and larger screens */
+/* Desktop and Larger Screens */
 @media (min-width: 1025px) {
     #left-column {
         width: 19%;
-        height: calc(100vh - 30%);
+        height: calc(100vh - 20%);
     }
 
     #right-column {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
-/* General button styles */
+/* General Button Styles */
 .button {
     background-color: black;
     color: white;
@@ -155,7 +123,7 @@ body {
     border-radius: 5px;
 }
 
-/* Clear filter button */
+/* Clear Filters Button */
 .clear-filters-button {
     background-color: #444;
     color: white;
@@ -165,7 +133,7 @@ body {
     border-radius: 5px;
 }
 
-/* Asset styling */
+/* Asset Styling */
 .asset {
     text-align: center;
     border: 1px solid #ccc;
