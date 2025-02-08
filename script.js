@@ -209,9 +209,12 @@ function displayAssets(data) {
         observer.observe(assetElement[0]);
     });
 
-       // Add the timestamp below the footer
-       const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + data.timestamp + '</p>');
-       $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
+const timestamp = new Date(jsonData.timestamp);
+const formattedTimestamp = timestamp.toLocaleString(); // Localize it for the user
+
+const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + formattedTimestamp + '</p>');
+$('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
+
 
 }
 
