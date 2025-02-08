@@ -12,13 +12,21 @@
         <h3>by <a href="https://x.com/Raxonchain" target="_blank">Rax</a> and <a href="https://x.com/btc_substance" target="_blank">MDV</a></h3>
         <p>Use the "+" to add a trait to the selection. Use the "-" to exclude a trait from the selection.</p>
         <p class="small-text">Tool built by <a href="https://x.com/cryptoferd13" target="_blank">Cryptoferd</a></p>
-        <p class="last-updated"></p> <!-- Timestamp will be appended here -->
+        <p class="last-updated"></p>
     </div>
-    
+
+    <!-- Hamburger Menu Button -->
+    <div id="hamburger-menu" class="hamburger" onclick="toggleMenu()">
+        &#9776;
+    </div>
+
+    <!-- Left Column (Filters) -->
     <div id="left-column">
         <button class="clear-filters-button" onclick="clearAllFilters()">Clear All Filters</button>
         <div id="filter-container"></div>
     </div>
+
+    <!-- Right Column (Assets Display) -->
     <div id="right-column"></div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
