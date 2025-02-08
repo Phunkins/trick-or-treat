@@ -136,7 +136,6 @@ function displayAssets(assets) {
     // Add a count of the filtered assets above the asset grid
     const assetCountText = `Matching Assets: ${assets.length}`;
     const assetCountElement = $('<div class="asset-count"></div>').text(assetCountText);
-
     rightColumn.append(assetCountElement); // Add count above assets
 
     const observer = new IntersectionObserver((entries, observer) => {
@@ -158,10 +157,11 @@ function displayAssets(assets) {
 
         // Only show listed price if > 0, remove trailing zeros
         let listedPriceElement = '';
-        if (item.listedPrice > 0) {
-            let listedPrice = parseFloat(item.listedPrice).toFixed(8); // Convert to float and remove trailing zeros
-            listedPrice = parseFloat(listedPrice).toString(); // This removes trailing zeros
-            listedPriceElement = $(`<p>${listedPrice} BTC</p>`);
+        const listedPrice = parseFloat(item.listedPrice.replace(" BTC", "").trim()); // Remove the " BTC" and convert to float
+        if (listedPrice > 0) {
+            let formattedPrice = listedPrice.toFixed(8); // Fix to 8 decimal places
+            formattedPrice = parseFloat(formattedPrice).toString(); // Remove trailing zeros
+            listedPriceElement = $(`<p>${formattedPrice} BTC</p>`);
         }
 
         imageElement[0].src = imageUrl;
@@ -173,7 +173,7 @@ function displayAssets(assets) {
     });
 
     // Update the footer with the last updated timestamp
-    const timestamp = new Date(data.timestamp);
+    const timestamp = new Date(assets[0].timestamp); // Parse the timestamp into a Date object (from the first token)
     const localTimestamp = timestamp.toLocaleString(); // Convert timestamp to local timezone
     const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
     $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
