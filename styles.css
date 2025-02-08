@@ -32,12 +32,13 @@ body {
     top: 0; /* Make sure it starts at the top of the screen */
     left: 0;
     right: 0; /* Ensure it takes the full width of the screen */
-    bottom: 0; /* Prevent any clipping at the bottom */
+    bottom: 10px; /* Set the bottom to 10px from the bottom of the screen */
     background-color: black;
     border-right: 2px solid #444;
     z-index: 100;
-    height: 100vh; /* Take the full viewport height */
+    height: calc(100vh - 10px); /* Adjust height to ensure 10px space from the bottom */
 }
+
 
 /* Hamburger Menu */
 .hamburger {
