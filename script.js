@@ -209,11 +209,10 @@ function displayAssets(data) {
         observer.observe(assetElement[0]);
     });
 
-    // Add the timestamp below the footer
-    const timestamp = new Date(data.timestamp); // Parse the timestamp into a Date object
-    const localTimestamp = timestamp.toLocaleString(); // Convert timestamp to local timezone
-    const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + timestamp + '</p>');
-    $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
+       // Add the timestamp below the footer
+       const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + data.timestamp + '</p>');
+       $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
+
 }
 
 // Function to clear all filters
