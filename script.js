@@ -15,6 +15,7 @@ async function fetchData() {
     data = jsonData.tokens; // Access the 'tokens' array directly
     generateFilters(data);  // Generate the filter options based on the data
     filterAssets();  // Filter assets initially
+    displayTimestamp(jsonData.timestamp);  // Display timestamp only once
 }
 
 // Function to generate the filter options on the left side
@@ -208,11 +209,12 @@ function displayAssets(data) {
 
         observer.observe(assetElement[0]);
     });
+}
 
-    // Add the timestamp below the footer
-    const timestamp = new Date(data.timestamp); // Parse the timestamp into a Date object
-    const localTimestamp = timestamp.toLocaleString(); // Convert timestamp to local timezone
-    const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
+// Display the timestamp in the header (only once)
+function displayTimestamp(timestamp) {
+    const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + new Date(timestamp).toLocaleString() + '</p>');
+    $('#header .last-updated').remove(); // Remove any existing timestamp
     $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
 }
 
@@ -226,6 +228,7 @@ function clearAllFilters() {
     $('.button').removeClass('green red').addClass('black');
     filterAssets();
 }
+
 // Toggle the filter panel when the hamburger menu is clicked
 function toggleMenu() {
     const leftColumn = document.getElementById("left-column");
