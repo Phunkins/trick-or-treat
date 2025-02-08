@@ -20,6 +20,10 @@ body {
     text-align: center;
     z-index: 10;
 }
+.small-text {
+    font-size: 0.8em; /* Adjust the font size as needed */
+    color: #666; /* Optional: Set a lighter color for small text */
+}
 
 /* Left Column (Filters) */
 #left-column {
