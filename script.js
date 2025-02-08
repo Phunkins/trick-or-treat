@@ -204,7 +204,6 @@ function displayAssets(data) {
 
 
 
-
 // Function to clear all filters
 function clearAllFilters() {
     for (const traitType in selectedTraits) {
