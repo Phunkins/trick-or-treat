@@ -185,7 +185,7 @@ function displayAssets(data) {
     // Iterate over sorted tokens and display them
     sortedTokens.forEach(item => {
         const assetElement = $('<div class="asset"></div>');
-        const imageUrl = `https://bafybeiaixko5zrwogs4hyopxld3aliu4w5kbb2n5grt4qgxxohjf7vlvlqwe.ipfs.w3s.link/${item.id}.png`;
+        const imageUrl = `https://bafybeiaixko5zrwogs4hyopxld3aliuokinzyg7xernfgeu4vukomrxu6q.ipfs.w3s.link/${item.id}.png`;
 
         const imageElement = $(`<img data-src="${imageUrl}" alt="${item.name}">`);
         const nameElement = $(`<a href="https://magiceden.us/ordinals/item-details/${item.id}" target="_blank">${item.name}</a>`);
