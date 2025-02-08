@@ -1,12 +1,13 @@
+/* General Styles (same as before) */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding-top: 8%; /* Adds space for the fixed header */
+    padding-top: 8%;
     background-color: black;
     color: grey;
 }
 
-/* Header styling */
+/* Header */
 #header {
     position: fixed;
     top: 0;
@@ -20,25 +21,7 @@ body {
     z-index: 10;
 }
 
-#header h1 {
-    margin: 0;
-}
-
-#header h3 {
-    margin: 5px 0;
-}
-
-#header a {
-    color: #55b8e6;
-    text-decoration: none;
-}
-
-#header .small-text {
-    font-size: 0.8em;
-    color: grey;
-}
-
-/* Left Column Styling (Filter area) */
+/* Left Column (Filters) */
 #left-column {
     width: 19%;
     padding: 10px;
@@ -52,10 +35,23 @@ body {
     border-right: 2px solid #444;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+}
+
+/* Right Column (Assets Display) */
 #right-column {
-    width: 100%;
+    width: 80%;
     padding: 20px;
-    margin-left: 0;
+    margin-left: 20%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 10px;
@@ -63,40 +59,85 @@ body {
     margin-top: 80px;
 }
 
-/* Responsive layout */
-@media only screen and (max-width: 768px) {
+/* Mobile-friendly Layout */
+@media (max-width: 768px) {
     #header {
-        position: relative;
-    }
-
-    #hamburger-menu {
-        position: fixed;
-        top: 20%;
-        left: 0;
-        width: 100%;
-        background-color: black;
-        z-index: 5;
-    }
-
-    #right-column {
-        margin-top: 120px; /* Adjust the margin to keep it below the header */
+        height: auto;
+        padding: 10px;
     }
 
     #left-column {
-        top: 0;
-        height: 100%;
-        position: fixed;
-        left: 0;
         width: 100%;
-        z-index: 4;
+        position: relative;
+        top: 0;
+        left: 0;
+        bottom: auto;
+        height: auto;
+        display: none; /* Hide filters by default */
     }
 
-    #header .small-text {
-        font-size: 0.8em;
-        color: grey;
+    /* Show hamburger menu on small screens */
+    .hamburger {
+        display: block;
+    }
+
+    #right-column {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .asset {
+        width: 100%;
+        /* Resize images for mobile */
+        max-width: 90%;
+    }
+
+    /* Grid adjustment for mobile */
+    #right-column {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on mobile */
     }
 }
 
+/* Landscape mobile view */
+@media (max-width: 1024px) {
+    #right-column {
+        grid-template-columns: repeat(5, 1fr); /* 5 columns on landscape mobile */
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1025px) {
+    #left-column {
+        width: 19%;
+        height: calc(100vh - 30%);
+    }
+
+    #right-column {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* General button styles */
+.button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Clear filter button */
+.clear-filters-button {
+    background-color: #444;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Asset styling */
 .asset {
     text-align: center;
     border: 1px solid #ccc;
@@ -109,19 +150,4 @@ body {
 .asset img {
     width: 100%;
     height: auto;
-}
-
-.clear-filters-button {
-    background-color: #444;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-}
-
-.clear-filters-button:hover {
-    background-color: #555;
 }
