@@ -5,6 +5,13 @@ const selectedTraits = {}; // Stores selected traits for filtering
 async function fetchData() {
     const response = await fetch('ptmeta2.json'); // Path to your external JSON file
     const jsonData = await response.json();
+
+    // Check if tokens array is present
+    if (!jsonData.tokens || !Array.isArray(jsonData.tokens)) {
+        console.error("No valid tokens data found.");
+        return;
+    }
+
     data = jsonData.tokens; // Access the 'tokens' array directly
     generateFilters(data);  // Generate the filter options based on the data
     filterAssets();  // Filter assets initially
@@ -129,8 +136,8 @@ function filterAssets() {
 }
 
 function displayAssets(data) {
-    // Check if tokens exists and is an array
-    if (!data || !Array.isArray(data.tokens)) {
+    // Check if data exists and is an array
+    if (!data || !Array.isArray(data)) {
         console.error("Tokens data is missing or malformed.");
         return;
     }
@@ -139,29 +146,29 @@ function displayAssets(data) {
     rightColumn.empty(); // Clear the assets display
 
     // Add a count of the filtered assets above the asset grid
-    const assetCountText = `Matching Assets: ${data.tokens.length}`;
+    const assetCountText = `Matching Assets: ${data.length}`;
     const assetCountElement = $('<div class="asset-count"></div>').text(assetCountText);
     rightColumn.append(assetCountElement); // Add count above assets
 
     // Sort tokens by listedPrice first, then by PoorTraits # if no price
-    const sortedTokens = data.tokens.sort((a, b) => {
-        // Parse the listedPrice for both tokens
-        const priceA = parseFloat(a.listedPrice.replace(" BTC", "").trim());
-        const priceB = parseFloat(b.listedPrice.replace(" BTC", "").trim());
+    const sortedTokens = data.sort((a, b) => {
+        const priceA = parseFloat(a.listedPrice.replace(" BTC", "").trim()) || NaN;
+        const priceB = parseFloat(b.listedPrice.replace(" BTC", "").trim()) || NaN;
 
         // If both have prices, sort by price
         if (!isNaN(priceA) && !isNaN(priceB)) {
             return priceA - priceB;
         }
 
-        // If one of them has no price, we fallback to sorting by the PoorTraits # number
+        // If both have no price, sort by name/inscription number
+        const numberA = a.name.split(" #")[1] ? parseInt(a.name.split(" #")[1]) : NaN;
+        const numberB = b.name.split(" #")[1] ? parseInt(b.name.split(" #")[1]) : NaN;
+
         if (isNaN(priceA) && isNaN(priceB)) {
-            const numberA = parseInt(a.name.split(" #")[1]);
-            const numberB = parseInt(b.name.split(" #")[1]);
             return numberA - numberB;
         }
 
-        // If one has a price and the other doesn't, the one with the price comes first
+        // If one has a price and the other doesn't, the one with a price comes first
         return isNaN(priceA) ? 1 : -1;
     });
 
@@ -186,10 +193,12 @@ function displayAssets(data) {
         // Only show listed price if > 0, remove trailing zeros
         let listedPriceElement = '';
         const listedPrice = parseFloat(item.listedPrice.replace(" BTC", "").trim()); // Remove the " BTC" and convert to float
-        if (listedPrice > 0) {
+        if (!isNaN(listedPrice) && listedPrice > 0) {
             let formattedPrice = listedPrice.toFixed(8); // Fix to 8 decimal places
             formattedPrice = parseFloat(formattedPrice).toString(); // Remove trailing zeros
             listedPriceElement = $(`<p>${formattedPrice} BTC</p>`);
+        } else if (isNaN(listedPrice) || listedPrice <= 0) {
+            listedPriceElement = $('<p>No price available</p>');
         }
 
         imageElement[0].src = imageUrl;
@@ -206,8 +215,6 @@ function displayAssets(data) {
     const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
     $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
 }
-
-
 
 // Function to clear all filters
 function clearAllFilters() {
