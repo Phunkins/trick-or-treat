@@ -129,18 +129,18 @@ function filterAssets() {
 }
 
 // Function to display assets on the right side
-function displayAssets(assets) {
+function displayAssets(data) {
     const rightColumn = $('#right-column');
     rightColumn.empty(); // Clear the assets display
 
     // Add a count of the filtered assets above the asset grid
-    const assetCountText = `Matching Assets: ${assets.length}`;
+    const assetCountText = `Matching Assets: ${data.tokens.length}`;
     const assetCountElement = $('<div class="asset-count"></div>').text(assetCountText);
     rightColumn.append(assetCountElement); // Add count above assets
 
-    // Sort assets by price (ascending), and for items without price, sort by "PoorTraits #" number
-    const sortedAssets = assets.sort((a, b) => {
-        // First, handle items with prices
+    // Sort tokens by listedPrice first, then by PoorTraits # if no price
+    const sortedTokens = data.tokens.sort((a, b) => {
+        // Parse the listedPrice for both tokens
         const priceA = parseFloat(a.listedPrice.replace(" BTC", "").trim());
         const priceB = parseFloat(b.listedPrice.replace(" BTC", "").trim());
 
@@ -151,13 +151,12 @@ function displayAssets(assets) {
 
         // If one of them has no price, we fallback to sorting by the PoorTraits # number
         if (isNaN(priceA) && isNaN(priceB)) {
-            // Extract PoorTraits # number and compare numerically
             const numberA = parseInt(a.name.split(" #")[1]);
             const numberB = parseInt(b.name.split(" #")[1]);
             return numberA - numberB;
         }
 
-        // If one has a price and the other does not, the one with the price comes first
+        // If one has a price and the other doesn't, the one with the price comes first
         return isNaN(priceA) ? 1 : -1;
     });
 
@@ -171,9 +170,10 @@ function displayAssets(assets) {
         });
     }, { rootMargin: '100px' });
 
-    sortedAssets.forEach(item => {
+    // Iterate over sorted tokens and display them
+    sortedTokens.forEach(item => {
         const assetElement = $('<div class="asset"></div>');
-        const imageUrl = `https://bafybeiaixko5zrwogs4hyopxld3aliuokinzyg7xernfgeu4vukomrxu6q.ipfs.w3s.link/${item.id}.png`;
+        const imageUrl = `https://bafybeiaixko5zrwogs4hyopxld3aliu4w5kbb2n5grt4qgxxohjf7vlvlqwe.ipfs.w3s.link/${item.id}.png`;
 
         const imageElement = $(`<img data-src="${imageUrl}" alt="${item.name}">`);
         const nameElement = $(`<a href="https://magiceden.us/ordinals/item-details/${item.id}" target="_blank">${item.name}</a>`);
@@ -195,12 +195,13 @@ function displayAssets(assets) {
         observer.observe(assetElement[0]);
     });
 
-    // Update the footer with the last updated timestamp
-    const timestamp = new Date(assets[0].timestamp); // Parse the timestamp into a Date object (from the first token)
+    // Add the timestamp below the footer
+    const timestamp = new Date(data.timestamp); // Parse the timestamp into a Date object
     const localTimestamp = timestamp.toLocaleString(); // Convert timestamp to local timezone
     const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
     $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
 }
+
 
 
 
