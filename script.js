@@ -226,6 +226,15 @@ function clearAllFilters() {
     $('.button').removeClass('green red').addClass('black');
     filterAssets();
 }
+// Toggle the filter panel when the hamburger menu is clicked
+function toggleMenu() {
+    const leftColumn = document.getElementById("left-column");
+    if (leftColumn.style.display === "block") {
+        leftColumn.style.display = "none";
+    } else {
+        leftColumn.style.display = "block";
+    }
+}
 
 // Initial fetch of data when the page loads
 fetchData();
