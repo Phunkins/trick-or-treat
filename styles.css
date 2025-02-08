@@ -38,6 +38,26 @@ body {
     background-color: black;
     border-right: 2px solid #444;
 }
+/* Button color styles */
+.button {
+    background-color: black;
+    color: white;
+}
+
+.button.green {
+    background-color: green;
+    color: white;
+}
+
+.button.red {
+    background-color: red;
+    color: white;
+}
+
+.button.black {
+    background-color: black;
+    color: white;
+}
 
 /* Hamburger Menu */
 .hamburger {
