@@ -46,7 +46,11 @@ body {
     right: 10px;
     z-index: 20;
 }
-
+.trait-type {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+}
 /* Right Column (Assets Display) */
 #right-column {
     width: 80%;
