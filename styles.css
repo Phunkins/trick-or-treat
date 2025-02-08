@@ -37,13 +37,13 @@ body {
     border-right: 2px solid #444;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu (Now Scrolls with the Page) */
 .hamburger {
     display: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
-    position: fixed;
+    position: absolute;
     top: 10px;
     right: 10px;
     z-index: 20;
@@ -64,7 +64,7 @@ body {
 /* Mobile-Friendly Layout */
 @media (max-width: 768px) {
     #header {
-        position: static; /* Make header non-fixed */
+        position: static;
         padding: 10px;
     }
 
@@ -72,12 +72,12 @@ body {
         width: 100%;
         position: relative;
         height: auto;
-        display: none; /* Hidden by default */
+        display: none;
     }
 
     .hamburger {
         display: block;
-        position: absolute;
+        position: fixed; /* Now follows the user when scrolling */
         top: 10px;
         right: 10px;
     }
@@ -85,7 +85,7 @@ body {
     #right-column {
         width: 100%;
         margin-left: 0;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Fit as many assets as possible */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .asset {
@@ -97,7 +97,7 @@ body {
 /* Landscape Mobile View */
 @media (max-width: 1024px) {
     #right-column {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Adjust dynamically */
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
 
@@ -147,10 +147,25 @@ body {
     width: 100%;
     height: auto;
 }
+
+/* Collapsible Trait Type */
 .trait-type {
     font-size: 1.2em;
     font-weight: bold;
     color: white;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #222;
+    border-bottom: 1px solid #444;
+}
+
+.trait-container {
+    display: none; /* Initially hidden */
+    padding: 5px;
+}
+
+.trait-type.active + .trait-container {
+    display: block; /* Show when active */
 }
 
 /* Button color styles */
