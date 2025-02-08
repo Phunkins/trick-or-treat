@@ -1,6 +1,19 @@
 let data = {}; // Holds the asset data (updated to store the full JSON)
 const selectedTraits = {}; // Stores selected traits for filtering
+// Ensure hamburger menu follows the user's scroll
+$(document).ready(function() {
+    const hamburger = $('.hamburger');
 
+    $(window).scroll(function() {
+        const scrollTop = $(window).scrollTop();
+        hamburger.css('top', `${scrollTop + 10}px`);
+    });
+});
+
+// Make trait type categories collapsible
+$(document).on('click', '.trait-type', function() {
+    $(this).next('.trait-list').slideToggle();
+});
 async function fetchData() {
     const response = await fetch('ptmeta2.json');
     const jsonData = await response.json();
