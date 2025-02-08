@@ -1,7 +1,6 @@
 let data = {}; // Holds the asset data (updated to store the full JSON)
 const selectedTraits = {}; // Stores selected traits for filtering
 
-// Fetch data from an external JSON file (pmeta2.json)
 async function fetchData() {
     const response = await fetch('ptmeta2.json');
     const jsonData = await response.json();
@@ -16,11 +15,16 @@ async function fetchData() {
     const timestamp = jsonData.timestamp; // Access the timestamp directly
     console.log('Timestamp:', timestamp); // Log to the console
 
-    if (timestamp) {
-        const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + timestamp + '</p>');
+    // Convert timestamp string to Date object
+    const timestampDate = new Date(timestamp);
+
+    // If the timestamp is valid, it will not be "Invalid Date"
+    if (!isNaN(timestampDate)) {
+        const formattedTimestamp = timestampDate.toLocaleString(); // Format it to local time
+        const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + formattedTimestamp + '</p>');
         $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
     } else {
-        console.error("Timestamp not found in the data.");
+        console.error("Invalid date format:", timestamp);
     }
 
     generateFilters(data);  // Generate the filter options based on the data
@@ -31,6 +35,7 @@ async function fetchData() {
 $(document).ready(function() {
     fetchData();
 });
+
 
 
 // Function to generate the filter options on the left side
