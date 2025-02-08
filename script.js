@@ -128,8 +128,13 @@ function filterAssets() {
     displayAssets(filteredAssets);  // Display the filtered assets
 }
 
-// Function to display assets on the right side
 function displayAssets(data) {
+    // Check if tokens exists and is an array
+    if (!data || !Array.isArray(data.tokens)) {
+        console.error("Tokens data is missing or malformed.");
+        return;
+    }
+
     const rightColumn = $('#right-column');
     rightColumn.empty(); // Clear the assets display
 
