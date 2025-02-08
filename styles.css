@@ -29,13 +29,15 @@ body {
     padding: 10px;
     overflow-y: auto;
     position: fixed;
-    top: 20%;
+    top: 0; /* Fixed to the top of the screen */
     left: 0;
-    bottom: 0;
-    height: calc(100vh - 20%); /* Allow full height minus the header */
+    bottom: 0; /* This ensures the column stays within the viewport */
+    height: calc(100vh - 20px); /* Adjust for padding and screen size */
     background-color: black;
     border-right: 2px solid #444;
+    z-index: 100; /* Ensure it's not hidden behind other elements */
 }
+
 
 /* Hamburger Menu */
 .hamburger {
