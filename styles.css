@@ -36,7 +36,7 @@ body {
     background-color: black;
     border-right: 2px solid #444;
     z-index: 100;
-    height: calc(100vh - 10px); /* Adjust height to ensure 10px space from the bottom */
+    height: calc(100vh - 25px); /* Adjust height to ensure 10px space from the bottom */
 }
 
 
