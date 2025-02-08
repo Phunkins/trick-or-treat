@@ -156,14 +156,29 @@ function displayAssets(assets) {
         const imageElement = $(`<img data-src="${imageUrl}" alt="${item.name}">`);
         const nameElement = $(`<a href="https://magiceden.us/ordinals/item-details/${item.id}" target="_blank">${item.name}</a>`);
 
+        // Only show listed price if > 0, remove trailing zeros
+        let listedPriceElement = '';
+        if (item.listedPrice > 0) {
+            let listedPrice = parseFloat(item.listedPrice).toFixed(8); // Convert to float and remove trailing zeros
+            listedPrice = parseFloat(listedPrice).toString(); // This removes trailing zeros
+            listedPriceElement = $(`<p>${listedPrice} BTC</p>`);
+        }
+
         imageElement[0].src = imageUrl;
 
-        assetElement.append(imageElement, nameElement);
+        assetElement.append(imageElement, nameElement, listedPriceElement);
         rightColumn.append(assetElement);
 
         observer.observe(assetElement[0]);
     });
+
+    // Update the footer with the last updated timestamp
+    const timestamp = new Date(data.timestamp);
+    const localTimestamp = timestamp.toLocaleString(); // Convert timestamp to local timezone
+    const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
+    $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
 }
+
 
 // Function to clear all filters
 function clearAllFilters() {
