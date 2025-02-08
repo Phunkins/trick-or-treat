@@ -78,12 +78,16 @@ body {
         display: none;
     }
 
-    .hamburger {
-        top: 0; /* Fix to the top */
-        right: 10px; /* Keep it to the right */
-        position: fixed;
-        z-index: 1000; /* Ensure it's on top of other elements */
-    }
+.hamburger {
+    display: block; /* Ensure it's visible */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: fixed; /* Fixed to the viewport */
+    top: 10px; /* Place 10px from the top */
+    right: 10px; /* Place 10px from the right */
+    z-index: 1000; /* Ensure it stays above everything */
+}
 
     #right-column {
         width: 100%;
