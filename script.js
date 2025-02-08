@@ -51,7 +51,6 @@ $(document).ready(function() {
 
 
 
-// Function to generate the filter options on the left side
 function generateFilters(data) {
     const traitTypes = {};
     const traitCounts = {}; // Store count of each trait value
@@ -80,7 +79,7 @@ function generateFilters(data) {
     for (const traitType in traitTypes) {
         const traitValues = [...traitTypes[traitType]].sort(); // Convert Set back to array and sort
         const traitTypeElement = $('<div class="trait-type"></div>').text(traitType);
-        const traitListElement = $('<div class="trait-list"></div>');
+        const traitListElement = $('<div class="trait-list"></div>').hide(); // Hide on page load
 
         traitValues.forEach(value => {
             const count = traitCounts[traitType][value]; // Get count of this trait value
@@ -105,6 +104,7 @@ function generateFilters(data) {
         filterContainer.append(traitTypeElement, traitListElement);
     }
 }
+
 
 // Toggle trait states (on or exclude) when a button is clicked
 function toggleTrait(traitType, value, state, plusButton, minusButton) {
