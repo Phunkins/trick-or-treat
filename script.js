@@ -138,6 +138,29 @@ function displayAssets(assets) {
     const assetCountElement = $('<div class="asset-count"></div>').text(assetCountText);
     rightColumn.append(assetCountElement); // Add count above assets
 
+    // Sort assets by price (ascending), and for items without price, sort by "PoorTraits #" number
+    const sortedAssets = assets.sort((a, b) => {
+        // First, handle items with prices
+        const priceA = parseFloat(a.listedPrice.replace(" BTC", "").trim());
+        const priceB = parseFloat(b.listedPrice.replace(" BTC", "").trim());
+
+        // If both have prices, sort by price
+        if (!isNaN(priceA) && !isNaN(priceB)) {
+            return priceA - priceB;
+        }
+
+        // If one of them has no price, we fallback to sorting by the PoorTraits # number
+        if (isNaN(priceA) && isNaN(priceB)) {
+            // Extract PoorTraits # number and compare numerically
+            const numberA = parseInt(a.name.split(" #")[1]);
+            const numberB = parseInt(b.name.split(" #")[1]);
+            return numberA - numberB;
+        }
+
+        // If one has a price and the other does not, the one with the price comes first
+        return isNaN(priceA) ? 1 : -1;
+    });
+
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -148,7 +171,7 @@ function displayAssets(assets) {
         });
     }, { rootMargin: '100px' });
 
-    assets.forEach(item => {
+    sortedAssets.forEach(item => {
         const assetElement = $('<div class="asset"></div>');
         const imageUrl = `https://bafybeiaixko5zrwogs4hyopxld3aliuokinzyg7xernfgeu4vukomrxu6q.ipfs.w3s.link/${item.id}.png`;
 
@@ -178,6 +201,7 @@ function displayAssets(assets) {
     const timestampElement = $('<p class="last-updated">Pricing Last Updated: ' + localTimestamp + '</p>');
     $('#header').append(timestampElement); // Add it under "Tool built by cryptoferd"
 }
+
 
 
 // Function to clear all filters
