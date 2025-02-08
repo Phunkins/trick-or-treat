@@ -9,7 +9,7 @@ body {
 
 /* Header (Fixed on Desktop, Static on Mobile) */
 #header {
-    width: 100%;
+    width: 95%;
     background-color: black;
     color: white;
     padding: 20px;
