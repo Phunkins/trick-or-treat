@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-02-16T04:43:43.186107 UTC",
+    "timestamp": "2025-02-16T04:44:04.689348 UTC",
     "tokens": [
         {
             "id": "dc693f2b7fc07365ae907f31e72396a5d4a8c88f74fb0040ce1da9a9a4770cbfi8",
@@ -36324,6 +36324,5930 @@
                 }
             ],
             "listedPrice": "0.00072000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei524",
+            "inscriptionNumber": 83187788,
+            "name": "PoorTraits #5425",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Atlas "
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00140000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei553",
+            "inscriptionNumber": 83187817,
+            "name": "PoorTraits #5454",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00330000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei555",
+            "inscriptionNumber": 83187819,
+            "name": "PoorTraits #5456",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Shapeshifter"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00095000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei589",
+            "inscriptionNumber": 83187853,
+            "name": "PoorTraits #5490",
+            "traits": [
+                {
+                    "trait_type": "datacrypt",
+                    "value": "datacrypt"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Ally"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "noise",
+                    "value": "noise"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.05130000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei593",
+            "inscriptionNumber": 83187857,
+            "name": "PoorTraits #5494",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Shapeshifter"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.01600000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei602",
+            "inscriptionNumber": 83187866,
+            "name": "PoorTraits #5503",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.07700000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei621",
+            "inscriptionNumber": 83187885,
+            "name": "PoorTraits #5522",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 8
+                }
+            ],
+            "listedPrice": "0.05500000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei625",
+            "inscriptionNumber": 83187889,
+            "name": "PoorTraits #5526",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Maia"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 7
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei638",
+            "inscriptionNumber": 83187902,
+            "name": "PoorTraits #5539",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Atlas "
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.03939840 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei639",
+            "inscriptionNumber": 83187903,
+            "name": "PoorTraits #5540",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Stoic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00360000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei642",
+            "inscriptionNumber": 83187906,
+            "name": "PoorTraits #5543",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Alcyone"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00150000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei649",
+            "inscriptionNumber": 83187913,
+            "name": "PoorTraits #5550",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Maia"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00060000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei659",
+            "inscriptionNumber": 83187923,
+            "name": "PoorTraits #5560",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00120000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei681",
+            "inscriptionNumber": 83187945,
+            "name": "PoorTraits #5582",
+            "traits": [
+                {
+                    "trait_type": "datacrypt",
+                    "value": "datacrypt"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Prophet"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00175000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei689",
+            "inscriptionNumber": 83187953,
+            "name": "PoorTraits #5590",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Prophet"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "noise",
+                    "value": "noise"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00070000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei729",
+            "inscriptionNumber": 83187993,
+            "name": "PoorTraits #5630",
+            "traits": [
+                {
+                    "trait_type": "ego husk",
+                    "value": "ego husk"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 8
+                }
+            ],
+            "listedPrice": "0.01900000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei736",
+            "inscriptionNumber": 83188000,
+            "name": "PoorTraits #5637",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Prophet"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.00250000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei739",
+            "inscriptionNumber": 83188003,
+            "name": "PoorTraits #5640",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Magician"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.12000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei742",
+            "inscriptionNumber": 83188006,
+            "name": "PoorTraits #5643",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00250000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei772",
+            "inscriptionNumber": 83188036,
+            "name": "PoorTraits #5673",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Atlas "
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 7
+                }
+            ],
+            "listedPrice": "0.00095000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei797",
+            "inscriptionNumber": 83188061,
+            "name": "PoorTraits #5698",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Atlas "
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00128000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei817",
+            "inscriptionNumber": 83188081,
+            "name": "PoorTraits #5718",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei851",
+            "inscriptionNumber": 83188115,
+            "name": "PoorTraits #5752",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00109000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei881",
+            "inscriptionNumber": 83188145,
+            "name": "PoorTraits #5782",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei888",
+            "inscriptionNumber": 83188152,
+            "name": "PoorTraits #5789",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Ally"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00078900 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei892",
+            "inscriptionNumber": 83188156,
+            "name": "PoorTraits #5793",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.00330000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei904",
+            "inscriptionNumber": 83188168,
+            "name": "PoorTraits #5805",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Seeker"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 7
+                }
+            ],
+            "listedPrice": "0.00300000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei906",
+            "inscriptionNumber": 83188170,
+            "name": "PoorTraits #5807",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00290000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei909",
+            "inscriptionNumber": 83188173,
+            "name": "PoorTraits #5810",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00150000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei931",
+            "inscriptionNumber": 83188195,
+            "name": "PoorTraits #5832",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "1.00000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei935",
+            "inscriptionNumber": 83188199,
+            "name": "PoorTraits #5836",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Magician"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00150000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei939",
+            "inscriptionNumber": 83188203,
+            "name": "PoorTraits #5840",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.08000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei949",
+            "inscriptionNumber": 83188213,
+            "name": "PoorTraits #5850",
+            "traits": [
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "noise",
+                    "value": "noise"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00299000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei969",
+            "inscriptionNumber": 83188233,
+            "name": "PoorTraits #5870",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.04727808 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei981",
+            "inscriptionNumber": 83188245,
+            "name": "PoorTraits #5882",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00369000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei984",
+            "inscriptionNumber": 83188248,
+            "name": "PoorTraits #5885",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Seeker"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00340000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei988",
+            "inscriptionNumber": 83188252,
+            "name": "PoorTraits #5889",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Threshold Guardian"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00100000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei991",
+            "inscriptionNumber": 83188255,
+            "name": "PoorTraits #5892",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Innocent"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00125000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1001",
+            "inscriptionNumber": 83188265,
+            "name": "PoorTraits #5902",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Magician"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00080000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1020",
+            "inscriptionNumber": 83188284,
+            "name": "PoorTraits #5921",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Threshold Guardian"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00139000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1033",
+            "inscriptionNumber": 83188297,
+            "name": "PoorTraits #5934",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "datacrypt",
+                    "value": "datacrypt"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.45000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1040",
+            "inscriptionNumber": 83188304,
+            "name": "PoorTraits #5941",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "infomorphism",
+                    "value": "infomorphism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00640000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1042",
+            "inscriptionNumber": 83188306,
+            "name": "PoorTraits #5943",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00260000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1047",
+            "inscriptionNumber": 83188311,
+            "name": "PoorTraits #5948",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "infomorphism",
+                    "value": "infomorphism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00100000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1064",
+            "inscriptionNumber": 83188328,
+            "name": "PoorTraits #5965",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Stoic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00075000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1066",
+            "inscriptionNumber": 83188330,
+            "name": "PoorTraits #5967",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00095000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1073",
+            "inscriptionNumber": 83188337,
+            "name": "PoorTraits #5974",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Shapeshifter"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00110000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1088",
+            "inscriptionNumber": 83188352,
+            "name": "PoorTraits #5989",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Alcyone"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00065500 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1106",
+            "inscriptionNumber": 83188370,
+            "name": "PoorTraits #6007",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00071000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1112",
+            "inscriptionNumber": 83188376,
+            "name": "PoorTraits #6013",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00099000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1113",
+            "inscriptionNumber": 83188377,
+            "name": "PoorTraits #6014",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Magician"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00078000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1132",
+            "inscriptionNumber": 83188396,
+            "name": "PoorTraits #6033",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00330000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1133",
+            "inscriptionNumber": 83188397,
+            "name": "PoorTraits #6034",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Stoic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1155",
+            "inscriptionNumber": 83188419,
+            "name": "PoorTraits #6056",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00110000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1159",
+            "inscriptionNumber": 83188423,
+            "name": "PoorTraits #6060",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Ally"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00999900 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1175",
+            "inscriptionNumber": 83188439,
+            "name": "PoorTraits #6076",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1185",
+            "inscriptionNumber": 83188449,
+            "name": "PoorTraits #6086",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00278000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1188",
+            "inscriptionNumber": 83188452,
+            "name": "PoorTraits #6089",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mystic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "sinusoidal perlin"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00100000 BTC"
+        },
+        {
+            "id": "87aeec7f39914cf504523e669536f95ecaf1bfb9e31172d7458388644cd5b3cei1216",
+            "inscriptionNumber": 83188480,
+            "name": "PoorTraits #6117",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Seeker"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00120000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai25",
+            "inscriptionNumber": 83190265,
+            "name": "PoorTraits #6151",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.10000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai31",
+            "inscriptionNumber": 83190271,
+            "name": "PoorTraits #6157",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00150000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai52",
+            "inscriptionNumber": 83190292,
+            "name": "PoorTraits #6178",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "simulacra",
+                    "value": "simulacra"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00800000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai62",
+            "inscriptionNumber": 83190302,
+            "name": "PoorTraits #6188",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mystic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.03000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai67",
+            "inscriptionNumber": 83190307,
+            "name": "PoorTraits #6193",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00062000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai68",
+            "inscriptionNumber": 83190308,
+            "name": "PoorTraits #6194",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00130000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai87",
+            "inscriptionNumber": 83190327,
+            "name": "PoorTraits #6213",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Mystic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "simulacra",
+                    "value": "simulacra"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00500000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai93",
+            "inscriptionNumber": 83190333,
+            "name": "PoorTraits #6219",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai112",
+            "inscriptionNumber": 83190352,
+            "name": "PoorTraits #6238",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00069000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai127",
+            "inscriptionNumber": 83190367,
+            "name": "PoorTraits #6253",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "infomorphism",
+                    "value": "infomorphism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00079900 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai130",
+            "inscriptionNumber": 83190370,
+            "name": "PoorTraits #6256",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Seeker"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00250000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai135",
+            "inscriptionNumber": 83190375,
+            "name": "PoorTraits #6261",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.00500000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai139",
+            "inscriptionNumber": 83190379,
+            "name": "PoorTraits #6265",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Alcyone"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00500000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai176",
+            "inscriptionNumber": 83190416,
+            "name": "PoorTraits #6302",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mentor"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.01160000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai184",
+            "inscriptionNumber": 83190424,
+            "name": "PoorTraits #6310",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Alcyone"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00120000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai188",
+            "inscriptionNumber": 83190428,
+            "name": "PoorTraits #6314",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Maia"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00160000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai191",
+            "inscriptionNumber": 83190431,
+            "name": "PoorTraits #6317",
+            "traits": [
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Ally"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "noise",
+                    "value": "noise"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 5
+                }
+            ],
+            "listedPrice": "0.00299000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai193",
+            "inscriptionNumber": 83190433,
+            "name": "PoorTraits #6319",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai198",
+            "inscriptionNumber": 83190438,
+            "name": "PoorTraits #6324",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Threshold Guardian"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.10000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai215",
+            "inscriptionNumber": 83190455,
+            "name": "PoorTraits #6341",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Mystic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.01110000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai221",
+            "inscriptionNumber": 83190461,
+            "name": "PoorTraits #6347",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00750000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai226",
+            "inscriptionNumber": 83190466,
+            "name": "PoorTraits #6352",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Stoic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai236",
+            "inscriptionNumber": 83190476,
+            "name": "PoorTraits #6362",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "blocked"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00069878 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai271",
+            "inscriptionNumber": 83190511,
+            "name": "PoorTraits #6397",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "infomorphism",
+                    "value": "infomorphism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 16
+                }
+            ],
+            "listedPrice": "0.00096320 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai293",
+            "inscriptionNumber": 83190533,
+            "name": "PoorTraits #6419",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "fragment",
+                    "value": "fragment"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 10
+                }
+            ],
+            "listedPrice": "0.00200000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai297",
+            "inscriptionNumber": 83190537,
+            "name": "PoorTraits #6423",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Shapeshifter"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00155000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai298",
+            "inscriptionNumber": 83190538,
+            "name": "PoorTraits #6424",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "Taygeta"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "lateral diffusion"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00820000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai307",
+            "inscriptionNumber": 83190547,
+            "name": "PoorTraits #6433",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Creator"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00149000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai310",
+            "inscriptionNumber": 83190550,
+            "name": "PoorTraits #6436",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Alcyone"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00099900 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai314",
+            "inscriptionNumber": 83190554,
+            "name": "PoorTraits #6440",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Stoic"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "synthetic",
+                    "value": "synthetic"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00300000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai318",
+            "inscriptionNumber": 83190558,
+            "name": "PoorTraits #6444",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00146000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai330",
+            "inscriptionNumber": 83190570,
+            "name": "PoorTraits #6456",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "infomorphism",
+                    "value": "infomorphism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Electra"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 14
+                }
+            ],
+            "listedPrice": "0.00075000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai333",
+            "inscriptionNumber": 83190573,
+            "name": "PoorTraits #6459",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Maia"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 15
+                }
+            ],
+            "listedPrice": "0.00290000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai335",
+            "inscriptionNumber": 83190575,
+            "name": "PoorTraits #6461",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Prophet"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.01000000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai339",
+            "inscriptionNumber": 83190579,
+            "name": "PoorTraits #6465",
+            "traits": [
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 11
+                }
+            ],
+            "listedPrice": "0.00067000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai344",
+            "inscriptionNumber": 83190584,
+            "name": "PoorTraits #6470",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "Atlas "
+                },
+                {
+                    "trait_type": "background",
+                    "value": "void"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00099000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai361",
+            "inscriptionNumber": 83190601,
+            "name": "PoorTraits #6487",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Seeker"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00250000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai369",
+            "inscriptionNumber": 83190609,
+            "name": "PoorTraits #6495",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Herald"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "bifocal"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "yellow"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "blue"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 13
+                }
+            ],
+            "listedPrice": "0.00500000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai372",
+            "inscriptionNumber": 83190612,
+            "name": "PoorTraits #6498",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "homogenization",
+                    "value": "homogenization"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Sage"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "vertical disturbance"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "homogenization color",
+                    "value": "orange"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 9
+                }
+            ],
+            "listedPrice": "0.00155000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai380",
+            "inscriptionNumber": 83190620,
+            "name": "PoorTraits #6506",
+            "traits": [
+                {
+                    "trait_type": "datacrypt",
+                    "value": "datacrypt"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Trickster"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "torque stretch"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "low"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "magenta"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 12
+                }
+            ],
+            "listedPrice": "0.00880000 BTC"
+        },
+        {
+            "id": "da3665fd57c010ce4e7e28fc5650143f2880b3f9b322b93b526a50d582ed6d8ai391",
+            "inscriptionNumber": 83190631,
+            "name": "PoorTraits #6517",
+            "traits": [
+                {
+                    "trait_type": "semiocapitalism",
+                    "value": "semiocapitalism"
+                },
+                {
+                    "trait_type": "duality",
+                    "value": "duality"
+                },
+                {
+                    "trait_type": "bust",
+                    "value": "The Shadow"
+                },
+                {
+                    "trait_type": "background",
+                    "value": "fog"
+                },
+                {
+                    "trait_type": "noise",
+                    "value": "noise"
+                },
+                {
+                    "trait_type": "block strain",
+                    "value": "block strain"
+                },
+                {
+                    "trait_type": "block strain amount",
+                    "value": "max"
+                },
+                {
+                    "trait_type": "distortion",
+                    "value": "oscillating homogenization"
+                },
+                {
+                    "trait_type": "distortion factor",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "distortion rate",
+                    "value": "medium"
+                },
+                {
+                    "trait_type": "distortion mod",
+                    "value": "high"
+                },
+                {
+                    "trait_type": "light color 1",
+                    "value": "cyan"
+                },
+                {
+                    "trait_type": "light color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "fog color",
+                    "value": "pink"
+                },
+                {
+                    "trait_type": "ascii color 1",
+                    "value": "red"
+                },
+                {
+                    "trait_type": "ascii color 2",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "ascii color 3",
+                    "value": "green"
+                },
+                {
+                    "trait_type": "Trait Count",
+                    "value": 17
+                }
+            ],
+            "listedPrice": "0.00300000 BTC"
         }
     ]
 }
